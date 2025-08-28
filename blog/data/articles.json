@@ -15,14 +15,14 @@
       "slug": "why-its-the-hi-human-intelligence-bubble-not-ai-bubble-thats-going-to-burst"
     },
     {
-      "id": "2025-08-28-test-for-github",
-      "title": "test for github",
-      "excerpt": "test",
+      "id": "2025-08-28-final-test-to-see-if-this-cicd-works-right",
+      "title": "final test to see if this CI/CD works right",
+      "excerpt": "",
       "date": "2025-08-28",
       "author": "Prajyoth Reddy",
       "tags": [],
       "readTime": "5 min read",
-      "slug": "test-for-github"
+      "slug": "final-test-to-see-if-this-cicd-works-right"
     },
     {
       "id": "2025-01-29-building-with-javascript",
@@ -54,6 +54,6 @@
     }
   ],
   "totalCount": 4,
-  "lastUpdated": "2025-08-28T19:58:02.214Z",
+  "lastUpdated": "2025-08-28T20:29:42.298Z",
   "generatedBy": "generate-articles.js"
 }

@@ -4,7 +4,7 @@ window.articlesData = {
     {
       "id": "2025-08-28-why-its-the-hi-human-intelligence-bubble-not-ai-bubble-thats-going-to-burst",
       "title": "Why it's the HI (Human Intelligence) bubble not AI bubble that's going to burst",
-      "excerpt": "Human Intellegence",
+      "excerpt": "Human Intelligence",
       "date": "2025-08-28",
       "author": "Prajyoth Reddy",
       "tags": [
@@ -12,33 +12,18 @@ window.articlesData = {
         "AI",
         "Random"
       ],
-      "readTime": "5 min read",
+      "readTime": 8,
       "slug": "why-its-the-hi-human-intelligence-bubble-not-ai-bubble-thats-going-to-burst"
     },
     {
-      "id": "2025-08-28-the-most-simplistic-blogging-setup-youll-ever-come-across",
-      "title": "The most simplistic blogging setup you'll ever come across",
-      "excerpt": "No, no fancy framework, no complex build tools, just JS used correctly. Automated, free of cost, seo optimised! No it's not a prank.",
-      "date": "2025-08-28",
-      "author": "Prajyoth Reddy",
-      "tags": [
-        "Blog",
-        "javascript",
-        "web-development",
-        "tools"
-      ],
-      "readTime": "5 min read",
-      "slug": "the-most-simplistic-blogging-setup-youll-ever-come-across"
-    },
-    {
-      "id": "2025-08-28-test-for-github",
-      "title": "test for github",
-      "excerpt": "test",
+      "id": "2025-08-28-final-test-to-see-if-this-cicd-works-right",
+      "title": "final test to see if this CI/CD works right",
+      "excerpt": "",
       "date": "2025-08-28",
       "author": "Prajyoth Reddy",
       "tags": [],
       "readTime": "5 min read",
-      "slug": "test-for-github"
+      "slug": "final-test-to-see-if-this-cicd-works-right"
     },
     {
       "id": "2025-01-29-building-with-javascript",
@@ -69,7 +54,7 @@ window.articlesData = {
       "slug": "2025-01-28-welcome-to-my-blog"
     }
   ],
-  "totalCount": 5,
-  "lastUpdated": "2025-08-28T19:19:05.378Z",
+  "totalCount": 4,
+  "lastUpdated": "2025-08-28T20:29:42.298Z",
   "generatedBy": "generate-articles.js"
 };

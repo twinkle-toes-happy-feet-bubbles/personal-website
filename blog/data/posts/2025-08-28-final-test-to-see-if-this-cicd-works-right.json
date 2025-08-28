@@ -1,0 +1,12 @@
+{
+  "id": "2025-08-28-final-test-to-see-if-this-cicd-works-right",
+  "title": "final test to see if this CI/CD works right",
+  "slug": "final-test-to-see-if-this-cicd-works-right",
+  "excerpt": "",
+  "description": "",
+  "date": "2025-08-28",
+  "author": "Prajyoth Reddy",
+  "tags": [],
+  "readTime": "5 min read",
+  "content": "# final test to see if this CI/CD works right\n\nWrite your blog post content here using Markdown.\n\n## Getting Started\n\nYou can use:\n- **Bold text**\n- *Italic text*\n- `inline code`\n- [Links](https://example.com)\n- Lists\n- Code blocks\n\n```javascript\nconsole.log('Hello, world!');\n```\n\n## Conclusion\n\nWrap up your thoughts here."
+}
