@@ -74,8 +74,15 @@ function generateArticlesIndex() {
         // Write to articles.json
         fs.writeFileSync(OUTPUT_FILE, JSON.stringify(articlesData, null, 2));
 
-        console.log(`\n🎉 Successfully generated articles.json with ${articles.length} articles`);
-        console.log(`📄 Output: ${OUTPUT_FILE}`);
+        // Also write to articles.js for CORS-free loading
+        const JS_OUTPUT_FILE = path.join(__dirname, 'data', 'articles.js');
+        const jsContent = `// Articles data - generated automatically
+window.articlesData = ${JSON.stringify(articlesData, null, 2)};`;
+        fs.writeFileSync(JS_OUTPUT_FILE, jsContent);
+
+        console.log(`\n🎉 Successfully generated articles files with ${articles.length} articles`);
+        console.log(`📄 JSON Output: ${OUTPUT_FILE}`);
+        console.log(`📄 JS Output: ${JS_OUTPUT_FILE}`);
 
     } catch (error) {
         console.error('❌ Error generating articles index:', error.message);

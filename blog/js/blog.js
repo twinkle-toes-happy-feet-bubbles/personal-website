@@ -92,7 +92,7 @@ const BlogApp = (() => {
             ${article.title}
           </h3>
           <p class="text-muted-foreground leading-relaxed font-sans">
-            ${article.description}
+            ${article.excerpt}
           </p>
           <div class="flex flex-wrap gap-1 mt-3">
             ${tagsHtml}
@@ -116,7 +116,7 @@ const BlogApp = (() => {
     const extractTags = () => {
         const tagSet = new Set();
         articles.forEach(article => {
-            if (article.published && article.tags) {
+            if (article.tags) {
                 article.tags.forEach(tag => tagSet.add(tag));
             }
         });
@@ -129,7 +129,7 @@ const BlogApp = (() => {
 
         const tagButtons = allTags.map(tag => {
             const count = articles.filter(article =>
-                article.published && article.tags && article.tags.includes(tag)
+                article.tags && article.tags.includes(tag)
             ).length;
 
             return `
@@ -149,14 +149,14 @@ const BlogApp = (() => {
 
     // Filter articles based on search and tags
     const filterArticles = () => {
-        let filtered = articles.filter(article => article.published);
+        let filtered = articles.slice(); // Start with all articles
 
         // Apply search filter
         if (searchQuery.trim()) {
             const query = searchQuery.toLowerCase();
             filtered = filtered.filter(article =>
                 article.title.toLowerCase().includes(query) ||
-                article.description.toLowerCase().includes(query) ||
+                article.excerpt.toLowerCase().includes(query) ||
                 (article.tags && article.tags.some(tag => tag.toLowerCase().includes(query)))
             );
         }
@@ -215,7 +215,7 @@ const BlogApp = (() => {
     const updateResultsInfo = () => {
         if (!resultsInfo) return;
 
-        const totalPublished = articles.filter(article => article.published).length;
+        const totalPublished = articles.length;
         const filteredCount = filteredArticles.length;
 
         if (searchQuery.trim() || activeTags.length > 0) {
@@ -363,20 +363,22 @@ const BlogApp = (() => {
         filterArticles();
     };
 
-    // Load articles from JSON
-    const loadArticles = async () => {
+    // Load articles from data
+    const loadArticles = () => {
         try {
             showLoading();
 
-            const response = await fetch('blog/data/articles.json');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+            console.log('Checking for articles data...', window.articlesData);
+
+            // Use the articles data loaded from articles.js
+            if (window.articlesData && window.articlesData.articles) {
+                articles = window.articlesData.articles;
+                console.log('Loaded articles:', articles.length);
+                renderArticles();
+            } else {
+                console.error('Articles data not available. Window.articlesData:', window.articlesData);
+                throw new Error('Articles data not found');
             }
-
-            const data = await response.json();
-            articles = data.articles || [];
-
-            renderArticles();
         } catch (error) {
             console.error('Failed to load articles:', error);
             showError();
@@ -481,7 +483,11 @@ const BlogApp = (() => {
         initDOMElements();
         setupEventHandlers();
         setupMobileOptimizations();
-        loadArticles();
+
+        // Wait a bit for articles.js to load, then try loading articles
+        setTimeout(() => {
+            loadArticles();
+        }, 100);
     };
 
     // Make functions available globally
