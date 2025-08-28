@@ -16,16 +16,6 @@ window.articlesData = {
       "slug": "why-its-the-hi-human-intelligence-bubble-not-ai-bubble-thats-going-to-burst"
     },
     {
-      "id": "2025-08-28-final-test-to-see-if-this-cicd-works-right",
-      "title": "final test to see if this CI/CD works right",
-      "excerpt": "",
-      "date": "2025-08-28",
-      "author": "Prajyoth Reddy",
-      "tags": [],
-      "readTime": "5 min read",
-      "slug": "final-test-to-see-if-this-cicd-works-right"
-    },
-    {
       "id": "2025-01-29-building-with-javascript",
       "title": "Building Modern Web Apps with Vanilla JavaScript",
       "excerpt": "Exploring how to build powerful web applications without heavy frameworks, focusing on performance and simplicity.",
@@ -54,7 +44,7 @@ window.articlesData = {
       "slug": "2025-01-28-welcome-to-my-blog"
     }
   ],
-  "totalCount": 4,
-  "lastUpdated": "2025-08-28T20:29:42.298Z",
+  "totalCount": 3,
+  "lastUpdated": "2025-08-28T20:32:38.976Z",
   "generatedBy": "generate-articles.js"
 };
