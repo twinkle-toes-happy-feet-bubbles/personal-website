@@ -16,7 +16,7 @@ const BlogConfig = {
         reactionsEnabled: '1', // Enable reactions
         emitMetadata: '0', // Emit discussion metadata
         inputPosition: 'top', // Comment input position
-        theme: 'dark', // Theme (dark/light/auto)
+        theme: 'dark_high_contrast', // Theme (dark/light/auto)
         lang: 'en', // Language
         loading: 'lazy', // Loading behavior
         crossorigin: 'anonymous',
