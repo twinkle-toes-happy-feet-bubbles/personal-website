@@ -1,0 +1,12 @@
+{
+  "id": "2025-08-28-test-for-github",
+  "title": "test for github",
+  "slug": "test-for-github",
+  "excerpt": "test",
+  "description": "test",
+  "date": "2025-08-28",
+  "author": "Prajyoth Reddy Mothi",
+  "tags": [],
+  "readTime": "5 min read",
+  "content": "# test for github\n\ntest\n\nWrite your blog post content here using Markdown.\n\n## Getting Started\n\nYou can use:\n- **Bold text**\n- *Italic text*\n- `inline code`\n- [Links](https://example.com)\n- Lists\n- Code blocks\n\n```javascript\nconsole.log('Hello, world!');\n```\n\n## Conclusion\n\nWrap up your thoughts here."
+}
