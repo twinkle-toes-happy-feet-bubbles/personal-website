@@ -11,7 +11,7 @@ const BlogConfig = {
         repoId: 'R_kgDOPl-gQQ', // Your repository ID (get from giscus.app)
         category: 'General', // Discussion category name
         categoryId: 'DIC_kwDOPl-gQc4CutjN', // Discussion category ID (get from giscus.app)
-        mapping: 'pathname', // How to map pages to discussions
+        mapping: 'url', // How to map pages to discussions
         strict: '0', // Use strict title matching
         reactionsEnabled: '1', // Enable reactions
         emitMetadata: '0', // Emit discussion metadata
