@@ -1,0 +1,20 @@
+{
+    "id": "2025-01-28-welcome-to-my-blog",
+    "title": "Welcome to My Blog",
+    "description": "My first blog post where I share my thoughts on technology, AI, and building cool stuff.",
+    "date": "2025-01-28",
+    "tags": [
+        "introduction",
+        "personal",
+        "technology"
+    ],
+    "author": "Prajyoth Reddy Mothi",
+    "readTime": 3,
+    "published": true,
+    "allowComments": true,
+    "content": "# Welcome to My Blog\n\nHey there! 👋\n\nWelcome to my little corner of the internet. I'm Prajyoth, and I'm excited to share my journey in technology, AI, and all the cool stuff I'm building.\n\n## What You'll Find Here\n\nThis blog is where I'll be sharing:\n\n- **Technical deep-dives** into projects I'm working on\n- **AI and Machine Learning** insights from my research at IIT Bombay\n- **Web development** tips and tricks I've learned\n- **Hardware projects** and robotics experiments\n- **Random thoughts** about technology and life\n\n## A Bit About Me\n\nI'm currently an Electronics & Communications student at SR University, but my interests span way beyond traditional ECE. I love:\n\n- Building things that solve real problems\n- Exploring the intersection of AI and hardware\n- Writing code that doesn't look like it's from the 90s\n- Making chai at 3 AM while debugging\n\n## What's Coming Next\n\nI've got some exciting posts planned:\n\n- How I built this blog system (spoiler: it's all client-side!)\n- My experience with Graph Neural Networks in catalyst design\n- Building a social app for 800+ students\n- Tips for getting into research as an undergrad\n\n## Let's Connect\n\nI'd love to hear from you! Whether you want to discuss a project, share ideas, or just say hi, feel free to reach out.\n\nThanks for stopping by, and I hope you find something interesting here!\n\n---\n\n*P.S. - This entire blog runs on vanilla JavaScript and GitHub Pages. No servers, no costs, just pure client-side magic. I'll write about how I built it soon!*",
+    "metadata": {
+        "created": "2025-01-28T10:00:00Z",
+        "updated": "2025-01-28T10:00:00Z"
+    }
+}

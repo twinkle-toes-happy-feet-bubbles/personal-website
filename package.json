@@ -1,0 +1,18 @@
+{
+    "name": "prajyoth-portfolio-blog",
+    "version": "1.0.0",
+    "description": "Portfolio and blog for Prajyoth Reddy Mothi",
+    "scripts": {
+        "build-articles": "node blog/generate-articles.js",
+        "new-post": "node blog/new-post.js",
+        "dev": "python -m http.server 8000",
+        "preview": "python -m http.server 3000"
+    },
+    "keywords": [
+        "portfolio",
+        "blog",
+        "static-site"
+    ],
+    "author": "Prajyoth Reddy Mothi",
+    "license": "MIT"
+}

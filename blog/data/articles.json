@@ -1,0 +1,33 @@
+{
+    "articles": [
+        {
+            "id": "2025-01-28-welcome-to-my-blog",
+            "title": "Welcome to My Blog",
+            "description": "My first blog post where I share my thoughts on technology, AI, and building cool stuff.",
+            "date": "2025-01-28",
+            "tags": [
+                "introduction",
+                "personal",
+                "technology"
+            ],
+            "readTime": 3,
+            "published": true,
+            "filename": "2025-01-28-welcome-to-my-blog.json"
+        },
+        {
+            "id": "2025-01-29-building-with-javascript",
+            "title": "Building Modern Web Apps with Vanilla JavaScript",
+            "description": "Exploring how to build powerful web applications without heavy frameworks, focusing on performance and simplicity.",
+            "date": "2025-01-29",
+            "tags": [
+                "javascript",
+                "web-development",
+                "performance"
+            ],
+            "readTime": 8,
+            "published": true,
+            "filename": "2025-01-29-building-with-javascript.json"
+        }
+    ],
+    "lastUpdated": "2025-01-29T10:00:00Z"
+}

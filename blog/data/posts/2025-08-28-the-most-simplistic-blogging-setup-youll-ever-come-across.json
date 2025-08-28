@@ -1,0 +1,17 @@
+{
+  "id": "2025-08-28-the-most-simplistic-blogging-setup-youll-ever-come-across",
+  "title": "The most simplistic blogging setup you'll ever come across",
+  "slug": "the-most-simplistic-blogging-setup-youll-ever-come-across",
+  "excerpt": "No, no fancy framework, no complex build tools, just JS used correctly. Automated, free of cost, seo optimised! No it's not a prank.",
+  "description": "No, no fancy framework, no complex build tools, just JS used correctly. Automated, free of cost, seo optimised! No it's not a prank.",
+  "date": "2025-08-28",
+  "author": "Prajyoth Reddy Mothi",
+  "tags": [
+    "Blog",
+    "javascript",
+    "web-development",
+    "tools"
+  ],
+  "readTime": "5 min read",
+  "content": "# The most simplistic blogging setup you'll ever come across\n\nNo, no fancy framework, no complex build tools, just JS used correctly. Automated, free of cost, seo optimised! No it's not a prank.\n\nWrite your blog post content here using Markdown.\n\n## Getting Started\n\nYou can use:\n- **Bold text**\n- *Italic text*\n- `inline code`\n- [Links](https://example.com)\n- Lists\n- Code blocks\n\n```javascript\nconsole.log('Hello, world!');\n```\n\n## Conclusion\n\nWrap up your thoughts here."
+}

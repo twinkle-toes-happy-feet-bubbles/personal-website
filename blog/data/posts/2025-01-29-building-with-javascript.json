@@ -1,0 +1,20 @@
+{
+    "id": "2025-01-29-building-with-javascript",
+    "title": "Building Modern Web Apps with Vanilla JavaScript",
+    "description": "Exploring how to build powerful web applications without heavy frameworks, focusing on performance and simplicity.",
+    "date": "2025-01-29",
+    "tags": [
+        "javascript",
+        "web-development",
+        "performance"
+    ],
+    "author": "Prajyoth Reddy Mothi",
+    "readTime": 8,
+    "published": true,
+    "allowComments": true,
+    "content": "# Building Modern Web Apps with Vanilla JavaScript\n\nIn a world dominated by React, Vue, and Angular, there's something refreshing about going back to vanilla JavaScript. Don't get me wrong – frameworks are great for complex applications. But sometimes, you don't need the overhead.\n\n## Why Vanilla JavaScript?\n\nHere's why I chose vanilla JS for this blog system:\n\n### Performance\n- **Zero framework overhead** – No extra kilobytes to download\n- **Faster initial load** – Less JavaScript to parse and execute\n- **Direct DOM manipulation** – No virtual DOM diffing\n\n### Simplicity\n- **No build process** – Write code, refresh browser\n- **No dependencies** – Just the browser APIs\n- **Easy debugging** – No framework abstractions to navigate\n\n### Learning\n- **Understanding the platform** – You learn how the web actually works\n- **Better problem solving** – You think about solutions, not framework patterns\n- **Transferable skills** – JavaScript fundamentals apply everywhere\n\n## Key Patterns I Use\n\n### 1. Module Pattern\n\n```javascript\nconst BlogApp = (() => {\n  let articles = [];\n  \n  const loadArticles = async () => {\n    try {\n      const response = await fetch('/blog/data/articles.json');\n      articles = await response.json();\n      renderArticles();\n    } catch (error) {\n      console.error('Failed to load articles:', error);\n    }\n  };\n  \n  const renderArticles = () => {\n    // Rendering logic here\n  };\n  \n  return {\n    init: loadArticles\n  };\n})();\n```\n\n### 2. Event Delegation\n\n```javascript\ndocument.addEventListener('click', (e) => {\n  if (e.target.matches('.article-card')) {\n    const articleId = e.target.dataset.articleId;\n    navigateToArticle(articleId);\n  }\n});\n```\n\n### 3. Template Literals for HTML\n\n```javascript\nconst createArticleCard = (article) => `\n  <div class=\"article-card\" data-article-id=\"${article.id}\">\n    <h3>${article.title}</h3>\n    <p>${article.description}</p>\n    <div class=\"article-meta\">\n      <span>${article.date}</span>\n      <span>${article.readTime} min read</span>\n    </div>\n  </div>\n`;\n```\n\n## Modern JavaScript Features\n\nVanilla doesn't mean old-school. I use modern ES6+ features:\n\n- **Async/await** for clean asynchronous code\n- **Destructuring** for cleaner variable assignments\n- **Arrow functions** for concise syntax\n- **Template literals** for string interpolation\n- **Modules** for code organization\n\n## When to Choose Frameworks\n\nVanilla JavaScript isn't always the answer. Use frameworks when:\n\n- Building complex SPAs with lots of state\n- Working with large teams that need consistent patterns\n- You need extensive ecosystem support\n- Time-to-market is critical\n\n## The Result\n\nThis blog system is:\n- **Fast** – Loads in milliseconds\n- **Simple** – Easy to understand and modify\n- **Maintainable** – No framework updates to worry about\n- **Educational** – Great for learning web fundamentals\n\n## Try It Yourself\n\nNext time you're building something simple, consider vanilla JavaScript. You might be surprised by how much you can accomplish with just the browser APIs.\n\nThe web platform is incredibly powerful these days. Sometimes, the best tool is the one that's already there.\n\n---\n\n*What's your experience with vanilla JavaScript? Have you tried building something without frameworks recently? I'd love to hear about it in the comments!*",
+    "metadata": {
+        "created": "2025-01-29T08:30:00Z",
+        "updated": "2025-01-29T08:30:00Z"
+    }
+}
