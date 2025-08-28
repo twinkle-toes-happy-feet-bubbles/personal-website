@@ -66,7 +66,7 @@ async function createNewPost() {
             excerpt: excerpt.trim() || '',
             description: excerpt.trim() || '',
             date: formatDate(now),
-            author: "Prajyoth Reddy Mothi",
+            author: "Prajyoth Reddy",
             tags: tags,
             readTime: "5 min read",
             content: `# ${title}\n\n${excerpt ? excerpt + '\n\n' : ''}Write your blog post content here using Markdown.\n\n## Getting Started\n\nYou can use:\n- **Bold text**\n- *Italic text*\n- \`inline code\`\n- [Links](https://example.com)\n- Lists\n- Code blocks\n\n\`\`\`javascript\nconsole.log('Hello, world!');\n\`\`\`\n\n## Conclusion\n\nWrap up your thoughts here.`

@@ -32,7 +32,7 @@ const BlogConfig = {
 
     // Site Information
     site: {
-        title: 'Prajyoth Reddy Mothi - Blog',
+        title: 'Prajyoth Reddy - Blog',
         description: 'Thoughts on technology, AI, web , building cool stuff and philosophy.',
         author: 'Prajyoth Reddy',
         url: 'https://twinkle-toes-happy-feet-bubbles.github.io'

@@ -95,7 +95,7 @@ const ArticleApp = (() => {
 
     // Update page meta tags
     const updateMetaTags = (article) => {
-        const title = `${article.title} - Prajyoth Reddy Mothi`;
+        const title = `${article.title} - Prajyoth Reddy `;
 
         if (articleTitle) articleTitle.textContent = title;
         if (articleDescription) articleDescription.setAttribute('content', article.description);

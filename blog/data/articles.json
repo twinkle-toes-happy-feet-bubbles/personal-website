@@ -1,59 +1,59 @@
 {
-  "articles": [
-    {
-      "id": "2025-08-28-why-its-the-hi-human-intelligence-bubble-not-ai-bubble-thats-going-to-burst",
-      "title": "Why it's the HI (Human Intelligence) bubble not AI bubble that's going to burst",
-      "excerpt": "Human Intelligence",
-      "date": "2025-08-28",
-      "author": "Prajyoth Reddy Mothi",
-      "tags": [
-        "philosophy",
-        "AI",
-        "Random"
-      ],
-      "readTime": 8,
-      "slug": "why-its-the-hi-human-intelligence-bubble-not-ai-bubble-thats-going-to-burst"
-    },
-    {
-      "id": "2025-08-28-test-for-github",
-      "title": "test for github",
-      "excerpt": "test",
-      "date": "2025-08-28",
-      "author": "Prajyoth Reddy Mothi",
-      "tags": [],
-      "readTime": "5 min read",
-      "slug": "test-for-github"
-    },
-    {
-      "id": "2025-01-29-building-with-javascript",
-      "title": "Building Modern Web Apps with Vanilla JavaScript",
-      "excerpt": "Exploring how to build powerful web applications without heavy frameworks, focusing on performance and simplicity.",
-      "date": "2025-01-29",
-      "author": "Prajyoth Reddy Mothi",
-      "tags": [
-        "javascript",
-        "web-development",
-        "performance"
-      ],
-      "readTime": 8,
-      "slug": "2025-01-29-building-with-javascript"
-    },
-    {
-      "id": "2025-01-28-welcome-to-my-blog",
-      "title": "Welcome to My Blog",
-      "excerpt": "My first blog post where I share my thoughts on technology, AI, and building cool stuff.",
-      "date": "2025-01-28",
-      "author": "Prajyoth Reddy Mothi",
-      "tags": [
-        "introduction",
-        "personal",
-        "technology"
-      ],
-      "readTime": 3,
-      "slug": "2025-01-28-welcome-to-my-blog"
-    }
-  ],
-  "totalCount": 4,
-  "lastUpdated": "2025-08-28T19:28:02.292Z",
-  "generatedBy": "generate-articles.js"
+    "articles": [
+        {
+            "id": "2025-08-28-why-its-the-hi-human-intelligence-bubble-not-ai-bubble-thats-going-to-burst",
+            "title": "Why it's the HI (Human Intelligence) bubble not AI bubble that's going to burst",
+            "excerpt": "Human Intelligence",
+            "date": "2025-08-28",
+            "author": "Prajyoth Reddy",
+            "tags": [
+                "philosophy",
+                "AI",
+                "Random"
+            ],
+            "readTime": 8,
+            "slug": "why-its-the-hi-human-intelligence-bubble-not-ai-bubble-thats-going-to-burst"
+        },
+        {
+            "id": "2025-08-28-test-for-github",
+            "title": "test for github",
+            "excerpt": "test",
+            "date": "2025-08-28",
+            "author": "Prajyoth Reddy",
+            "tags": [],
+            "readTime": "5 min read",
+            "slug": "test-for-github"
+        },
+        {
+            "id": "2025-01-29-building-with-javascript",
+            "title": "Building Modern Web Apps with Vanilla JavaScript",
+            "excerpt": "Exploring how to build powerful web applications without heavy frameworks, focusing on performance and simplicity.",
+            "date": "2025-01-29",
+            "author": "Prajyoth Reddy",
+            "tags": [
+                "javascript",
+                "web-development",
+                "performance"
+            ],
+            "readTime": 8,
+            "slug": "2025-01-29-building-with-javascript"
+        },
+        {
+            "id": "2025-01-28-welcome-to-my-blog",
+            "title": "Welcome to My Blog",
+            "excerpt": "My first blog post where I share my thoughts on technology, AI, and building cool stuff.",
+            "date": "2025-01-28",
+            "author": "Prajyoth Reddy",
+            "tags": [
+                "introduction",
+                "personal",
+                "technology"
+            ],
+            "readTime": 3,
+            "slug": "2025-01-28-welcome-to-my-blog"
+        }
+    ],
+    "totalCount": 4,
+    "lastUpdated": "2025-08-28T19:28:02.292Z",
+    "generatedBy": "generate-articles.js"
 }

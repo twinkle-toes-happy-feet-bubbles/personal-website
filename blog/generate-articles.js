@@ -49,7 +49,7 @@ function generateArticlesIndex() {
                     title: post.title,
                     excerpt: post.excerpt || post.description || '',
                     date: post.date,
-                    author: post.author || 'Prajyoth Reddy Mothi',
+                    author: post.author || 'Prajyoth Reddy',
                     tags: post.tags || [],
                     readTime: post.readTime || calculateReadTime(post.content || ''),
                     slug: post.slug || post.id

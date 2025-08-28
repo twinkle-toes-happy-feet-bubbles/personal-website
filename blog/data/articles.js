@@ -6,7 +6,7 @@ window.articlesData = {
       "title": "Why it's the HI (Human Intelligence) bubble not AI bubble that's going to burst",
       "excerpt": "Human Intellegence",
       "date": "2025-08-28",
-      "author": "Prajyoth Reddy Mothi",
+      "author": "Prajyoth Reddy",
       "tags": [
         "philosophy",
         "AI",
@@ -20,7 +20,7 @@ window.articlesData = {
       "title": "The most simplistic blogging setup you'll ever come across",
       "excerpt": "No, no fancy framework, no complex build tools, just JS used correctly. Automated, free of cost, seo optimised! No it's not a prank.",
       "date": "2025-08-28",
-      "author": "Prajyoth Reddy Mothi",
+      "author": "Prajyoth Reddy",
       "tags": [
         "Blog",
         "javascript",
@@ -35,7 +35,7 @@ window.articlesData = {
       "title": "test for github",
       "excerpt": "test",
       "date": "2025-08-28",
-      "author": "Prajyoth Reddy Mothi",
+      "author": "Prajyoth Reddy",
       "tags": [],
       "readTime": "5 min read",
       "slug": "test-for-github"
@@ -45,7 +45,7 @@ window.articlesData = {
       "title": "Building Modern Web Apps with Vanilla JavaScript",
       "excerpt": "Exploring how to build powerful web applications without heavy frameworks, focusing on performance and simplicity.",
       "date": "2025-01-29",
-      "author": "Prajyoth Reddy Mothi",
+      "author": "Prajyoth Reddy",
       "tags": [
         "javascript",
         "web-development",
@@ -59,7 +59,7 @@ window.articlesData = {
       "title": "Welcome to My Blog",
       "excerpt": "My first blog post where I share my thoughts on technology, AI, and building cool stuff.",
       "date": "2025-01-28",
-      "author": "Prajyoth Reddy Mothi",
+      "author": "Prajyoth Reddy",
       "tags": [
         "introduction",
         "personal",
