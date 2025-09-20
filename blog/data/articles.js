@@ -2,6 +2,20 @@
 window.articlesData = {
   "articles": [
     {
+      "id": "2025-09-20-watches-are-for-the-poor",
+      "title": "Watches are for the poor",
+      "excerpt": "Why watches were never just ornaments or tools—they were chains keeping workers' eyes on the clock while owners looked at calendars and forecasts.",
+      "date": "2025-09-20",
+      "author": "Prajyoth Reddy",
+      "tags": [
+        "philosophy",
+        "technology",
+        "random"
+      ],
+      "readTime": 7,
+      "slug": "2025-09-20-watches-are-for-the-poor"
+    },
+    {
       "id": "2025-08-28-why-its-the-hi-human-intelligence-bubble-not-ai-bubble-thats-going-to-burst",
       "title": "Why it's the HI (Human Intelligence) bubble not AI bubble that's going to burst",
       "excerpt": "Human Intelligence",
@@ -44,7 +58,7 @@ window.articlesData = {
       "slug": "2025-01-28-welcome-to-my-blog"
     }
   ],
-  "totalCount": 3,
-  "lastUpdated": "2025-08-28T20:32:38.976Z",
+  "totalCount": 4,
+  "lastUpdated": "2025-09-20T14:56:08.110Z",
   "generatedBy": "generate-articles.js"
 };
