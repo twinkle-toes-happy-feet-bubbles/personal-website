@@ -95,19 +95,90 @@ const ArticleApp = (() => {
 
     // Update page meta tags
     const updateMetaTags = (article) => {
-        const title = `${article.title} - Prajyoth Reddy `;
+        const title = `${article.title} - Prajyoth Reddy`;
+        const fullUrl = window.location.href;
 
+        // Update document title
         if (articleTitle) articleTitle.textContent = title;
+
+        // Update meta description
         if (articleDescription) articleDescription.setAttribute('content', article.description);
+
+        // Update Open Graph tags
         if (ogTitle) ogTitle.setAttribute('content', article.title);
         if (ogDescription) ogDescription.setAttribute('content', article.description);
+        if (document.getElementById('og-url')) {
+            document.getElementById('og-url').setAttribute('content', fullUrl);
+        }
+
+        // Update Twitter Card tags
+        if (document.getElementById('twitter-title')) {
+            document.getElementById('twitter-title').setAttribute('content', article.title);
+        }
+        if (document.getElementById('twitter-description')) {
+            document.getElementById('twitter-description').setAttribute('content', article.description);
+        }
+
+        // Update canonical URL
+        const canonicalLink = document.querySelector('link[rel="canonical"]');
+        if (canonicalLink) {
+            canonicalLink.setAttribute('href', fullUrl);
+        }
+        
+        // Update structured data (JSON-LD)
+        updateStructuredData(article, fullUrl);
+    };
+    
+    // Update the structured data for the article
+    const updateStructuredData = (article, url) => {
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": url
+            },
+            "headline": article.title,
+            "description": article.description,
+            "datePublished": article.date,
+            "dateModified": article.metadata?.updated || article.date,
+            "author": {
+                "@type": "Person",
+                "name": "Prajyoth Reddy M",
+                "url": "https://prajyoth.pages.dev/"
+            },
+            "publisher": {
+                "@type": "Person",
+                "name": "Prajyoth Reddy M",
+                "url": "https://prajyoth.pages.dev/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://prajyoth.pages.dev/prajyothprofilepic.png"
+                }
+            },
+            "image": "https://prajyoth.pages.dev/prajyothprofilepic.png",
+            "articleBody": article.content ? article.content.substring(0, 200) + '...' : article.description,
+            "keywords": article.tags ? article.tags.join(', ') : ''
+        };
+        
+        const scriptElement = document.getElementById('article-structured-data');
+        if (scriptElement) {
+            scriptElement.textContent = JSON.stringify(structuredData);
+        } else {
+            // Create the structured data script if it doesn't exist
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.id = 'article-structured-data';
+            script.textContent = JSON.stringify(structuredData);
+            document.head.appendChild(script);
+        }
     };
 
     // Render article content
     const renderArticle = (article) => {
         if (!article) return;
 
-        // Update meta tags
+        // Update meta tags FIRST, before updating other content
         updateMetaTags(article);
 
         // Update content
@@ -150,6 +221,12 @@ const ArticleApp = (() => {
     // Initialize reading progress indicator
     const initReadingProgress = () => {
         if (!readingProgress || !articleBody) return;
+
+        // Don't initialize reading progress on mobile devices to avoid scroll jank
+        if (window.innerWidth < 768) {
+            readingProgress.style.display = 'none';
+            return;
+        }
 
         const updateProgress = () => {
             const scrollTop = window.pageYOffset;

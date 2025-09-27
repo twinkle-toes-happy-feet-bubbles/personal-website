@@ -35,6 +35,6 @@ const BlogConfig = {
         title: 'Prajyoth Reddy - Blog',
         description: 'Thoughts on technology, AI, web , building cool stuff and philosophy.',
         author: 'Prajyoth Reddy',
-        url: 'https://twinkle-toes-happy-feet-bubbles.github.io'
+        url: 'https://prajyoth.pages.dev'
     }
 };

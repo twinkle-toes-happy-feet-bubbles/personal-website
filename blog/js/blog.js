@@ -475,6 +475,18 @@ const BlogApp = (() => {
                 searchInput.style.fontSize = '';
             });
         }
+        
+        // Disable smooth scrolling on mobile devices to improve performance
+        if (window.innerWidth < 768) {
+            // Override any CSS scroll-behavior for mobile
+            const style = document.createElement('style');
+            style.textContent = `
+                html {
+                    scroll-behavior: auto !important;
+                }
+            `;
+            document.head.appendChild(style);
+        }
     };
 
     // Initialize the blog app

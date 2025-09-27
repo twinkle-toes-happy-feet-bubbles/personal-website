@@ -92,7 +92,7 @@ const PerformanceOptimizer = (() => {
         // Preload fonts
         const fontPreload = document.createElement('link');
         fontPreload.rel = 'preload';
-        fontPreload.href = './Prajyoth Reddy Mothi - Webpage_files/e4af272ccee01ff0-s.p.woff2';
+        fontPreload.href = 'https://mpr-hosting-static-files.vercel.app/_next/static/media/e4af272ccee01ff0-s.p.woff2';
         fontPreload.as = 'font';
         fontPreload.type = 'font/woff2';
         fontPreload.crossOrigin = 'anonymous';
@@ -100,8 +100,8 @@ const PerformanceOptimizer = (() => {
 
         // Preload critical CSS if not already loaded
         const criticalCSS = [
-            './Prajyoth Reddy Mothi - Webpage_files/5b576904c612405e.css',
-            './Prajyoth Reddy Mothi - Webpage_files/af5f735e1b8a2a31.css'
+            'https://mpr-hosting-static-files.vercel.app/_next/static/css/5b576904c612405e.css',
+            'https://mpr-hosting-static-files.vercel.app/_next/static/css/af5f735e1b8a2a31.css'
         ];
 
         criticalCSS.forEach(href => {

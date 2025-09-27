@@ -10,10 +10,33 @@
         data-precedence="next">
     <link rel="stylesheet" href="https://mpr-hosting-static-files.vercel.app/_next/static/css/af5f735e1b8a2a31.css"
         data-precedence="next">
-    <title>Blog - Prajyoth Reddy</title>
     <meta name="description"
-        content="Thoughts on technology, AI, building digital experiences and philosophy. A collection of insights and learnings.">
-    <style>
+            content="Thoughts on technology, AI, building digital experiences and philosophy. A collection of insights and learnings.">
+        <meta name="theme-color" content="#0a0a0a">
+        <!-- Structured Data for SEO -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "name": "Prajyoth Reddy's Blog",
+          "description": "Thoughts on technology, AI, building digital experiences and philosophy. A collection of insights and learnings.",
+          "url": "https://prajyoth.pages.dev/blog.html",
+          "author": {
+            "@type": "Person",
+            "name": "Prajyoth Reddy M"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Prajyoth Reddy M",
+            "url": "https://prajyoth.pages.dev/"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://prajyoth.pages.dev/blog.html"
+          }
+        }
+        </script>
+        <style>
         /* Pure minimal black and white design system */
         :root {
             --blog-surface: rgba(255, 255, 255, 0.02);
@@ -339,6 +362,38 @@
             font-family: 'Courier New', monospace;
         }
 
+        /* Screen reader only class for accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .sr-only-focusable:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            clip: auto;
+            white-space: normal;
+        }
+
+        /* Theme Toggle Button */
+        #theme-toggle {
+            transition: all 0.3s ease;
+        }
+
+        #theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
         /* Mobile Navigation */
         #mobile-menu-toggle {
             transition: all 0.2s ease;
@@ -536,6 +591,13 @@
         body {
             animation: pageLoad 1s ease-out;
         }
+        
+        /* Disable scroll snapping and ensure smooth natural scrolling on mobile */
+        @media (max-width: 767.98px) {
+            html {
+                scroll-behavior: auto !important;
+            }
+        }
 
         @keyframes pageLoad {
             from {
@@ -609,12 +671,25 @@
 <body class="font-sans antialiased">
     <div
         class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm group-hover:border-muted-foreground/40 transition-colors duration-500 font-mono border-0">
+        <!-- Skip Navigation Link for Accessibility -->
+        <a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
+        
         <!-- Mobile Menu Toggle -->
         <button id="mobile-menu-toggle"
             class="fixed top-4 left-4 z-20 lg:hidden p-2 rounded-lg bg-background/80 backdrop-blur-sm border border-border/50">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                 </path>
+            </svg>
+        </button>
+        
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" 
+            class="fixed top-4 right-4 z-20 lg:block p-2 rounded-lg bg-background/80 backdrop-blur-sm border border-border/50"
+            aria-label="Toggle dark/light mode" 
+            title="Toggle dark/light mode">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
             </svg>
         </button>
 
@@ -649,7 +724,7 @@
             </div>
         </nav>
 
-        <main class="max-w-4xl mx-auto px-8 lg:px-16">
+        <main id="main-content" class="max-w-4xl mx-auto px-8 lg:px-16">
             <!-- Header Section -->
             <header class="min-h-screen flex items-center">
                 <div class="w-full space-y-16">
@@ -791,6 +866,54 @@
             </section>
         </main>
     </div>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        // Theme Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            
+            // Check for saved theme preference or respect system preference
+            const getPreferredTheme = () => {
+                const storedTheme = localStorage.getItem('theme');
+                if (storedTheme) {
+                    return storedTheme;
+                }
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            };
+            
+            // Set the initial theme
+            const setTheme = (theme) => {
+                if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                    // Update theme-color meta tag for mobile browsers
+                    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0a0a0a');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff');
+                }
+                localStorage.setItem('theme', theme);
+            };
+            
+            // Initialize theme
+            const currentTheme = getPreferredTheme();
+            setTheme(currentTheme);
+            
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+                    setTheme(newTheme);
+                });
+            }
+            
+            // Listen for system theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {
+                    setTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        });
+    </script>
 
     <!-- Blog JavaScript -->
     <script src="blog/data/articles.js"></script>
