@@ -6,27 +6,37 @@ const CommentsApp = (() => {
     // DOM elements
     let commentsSection, giscusContainer, commentsLoading, commentsError, retryButton;
 
+    // Get current theme based on HTML class
+    const getCurrentTheme = () => {
+        return document.documentElement.classList.contains('dark') ? 'dark_high_contrast' : 'light';
+    };
+
     // Get Giscus configuration from global config
     const getGiscusConfig = () => {
+        let config;
         if (typeof BlogConfig !== 'undefined' && BlogConfig.giscus) {
-            return BlogConfig.giscus;
+            config = { ...BlogConfig.giscus };
+        } else {
+            // Fallback configuration
+            config = {
+                repo: 'prajyothreddy/prajyothreddy.github.io',
+                repoId: 'R_kgDOL8vQdA',
+                category: 'General',
+                categoryId: 'DIC_kwDOL8vQdM4CfGqJ',
+                mapping: 'pathname',
+                strict: '0',
+                reactionsEnabled: '1',
+                emitMetadata: '0',
+                inputPosition: 'bottom',
+                theme: 'dark_high_contrast',
+                lang: 'en',
+                loading: 'lazy'
+            };
         }
-
-        // Fallback configuration
-        return {
-            repo: 'prajyothreddy/prajyothreddy.github.io',
-            repoId: 'R_kgDOL8vQdA',
-            category: 'General',
-            categoryId: 'DIC_kwDOL8vQdM4CfGqJ',
-            mapping: 'pathname',
-            strict: '0',
-            reactionsEnabled: '1',
-            emitMetadata: '0',
-            inputPosition: 'bottom',
-            theme: 'dark',
-            lang: 'en',
-            loading: 'lazy'
-        };
+        
+        // Always use current theme
+        config.theme = getCurrentTheme();
+        return config;
     };
 
     // Initialize DOM elements
@@ -196,7 +206,8 @@ const CommentsApp = (() => {
     };
 })();
 
-// Make retry function available globally
+// Make functions available globally
 window.CommentsApp = {
-    retry: () => CommentsApp.retryComments()
+    retry: () => CommentsApp.retryComments(),
+    updateTheme: (theme) => CommentsApp.updateTheme(theme)
 };

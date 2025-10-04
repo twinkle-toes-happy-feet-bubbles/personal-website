@@ -59,6 +59,6 @@ window.articlesData = {
     }
   ],
   "totalCount": 4,
-  "lastUpdated": "2025-09-20T15:02:25.227Z",
+  "lastUpdated": "2025-09-28T08:44:32.591Z",
   "generatedBy": "generate-articles.js"
 };

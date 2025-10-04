@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="__variable_e8ce0c dark">
+<html lang="en" class="__variable_e8ce0c dark" data-theme="dark">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -42,6 +42,159 @@
             --blog-surface: rgba(255, 255, 255, 0.02);
             --blog-border: rgba(255, 255, 255, 0.08);
             --blog-hover: rgba(255, 255, 255, 0.05);
+        }
+
+        :root {
+            --eye-bg-main: #F7F8EC;
+            --eye-bg-subtle: #EEF3DA;
+            --eye-surface: #E6EBC8;
+            --eye-text-normal: #303620;
+            --eye-text-muted: #5E684F;
+            --eye-headline: #212713;
+            --eye-accent: #8A7A32;
+            --eye-accent-soft: rgba(138, 122, 50, 0.18);
+            --eye-border-soft: #CBD4AF;
+            --eye-border-strong: #B9C495;
+            --eye-shadow: rgba(44, 56, 31, 0.12);
+            --eye-focus-ring: rgba(138, 122, 50, 0.32);
+        }
+
+        html[data-theme="eye"] {
+            background: var(--eye-bg-main);
+            color: var(--eye-text-normal);
+            filter: sepia(14%) saturate(88%) hue-rotate(354deg) brightness(1.02);
+            -webkit-font-smoothing: antialiased;
+            color-scheme: light;
+        }
+
+        html[data-theme="eye"] body {
+            background: var(--eye-bg-main);
+            color: var(--eye-text-normal);
+        }
+
+        html[data-theme="eye"] main,
+        html[data-theme="eye"] .blog-shell,
+        html[data-theme="eye"] .content-surface {
+            background: var(--eye-bg-main);
+        }
+
+        html[data-theme="eye"] .blog-card,
+        html[data-theme="eye"] header,
+        html[data-theme="eye"] section {
+            background: var(--eye-bg-subtle);
+            border-color: var(--eye-border-soft);
+            box-shadow: 0 12px 26px var(--eye-shadow);
+        }
+
+        html[data-theme="eye"] .article-title,
+        html[data-theme="eye"] h1,
+        html[data-theme="eye"] h2,
+        html[data-theme="eye"] h3 {
+            color: var(--eye-headline);
+        }
+
+        html[data-theme="eye"] .article-excerpt,
+        html[data-theme="eye"] .article-meta,
+        html[data-theme="eye"] .text-muted-foreground {
+            color: var(--eye-text-muted) !important;
+        }
+
+        html[data-theme="eye"] a,
+        html[data-theme="eye"] a:hover {
+            color: var(--eye-accent);
+        }
+
+        html[data-theme="eye"] .read-more-btn {
+            background: transparent;
+            color: var(--eye-text-normal);
+            border-color: var(--eye-border-soft);
+        }
+
+        html[data-theme="eye"] .read-more-btn:hover {
+            background: rgba(138, 122, 50, 0.16);
+        }
+
+        html[data-theme="eye"] #main-nav {
+            color: var(--eye-text-muted);
+        }
+
+        html[data-theme="eye"] #main-nav .nav-item {
+            border-color: var(--eye-border-soft);
+            background: rgba(234, 238, 212, 0.7);
+            color: var(--eye-text-muted);
+        }
+
+        html[data-theme="eye"] #main-nav .nav-item:hover,
+        html[data-theme="eye"] #main-nav .nav-item:focus-visible,
+        html[data-theme="eye"] #main-nav .nav-item.is-active {
+            border-color: var(--eye-accent);
+            background: rgba(138, 122, 50, 0.22);
+            color: var(--eye-headline);
+        }
+
+        html[data-theme="eye"] #main-nav .nav-indicator {
+            background: var(--eye-border-soft);
+        }
+
+        html[data-theme="eye"] #main-nav .nav-item:hover .nav-indicator,
+        html[data-theme="eye"] #main-nav .nav-item:focus-visible .nav-indicator,
+        html[data-theme="eye"] #main-nav .nav-item.is-active .nav-indicator {
+            background: var(--eye-accent);
+        }
+
+        html[data-theme="eye"] #main-nav .nav-item::after {
+            background: rgba(48, 56, 32, 0.94);
+            color: var(--eye-bg-main);
+        }
+
+        html[data-theme="eye"] #main-nav.mobile-open {
+            background: rgba(232, 236, 208, 0.96);
+            border-color: var(--eye-border-soft);
+            box-shadow: 0 28px 48px rgba(44, 56, 31, 0.3);
+        }
+
+        html[data-theme="eye"] #main-nav.mobile-open .nav-item {
+            background: rgba(234, 238, 212, 0.86);
+            border-color: var(--eye-border-soft);
+            color: var(--eye-text-normal);
+        }
+
+        html[data-theme="eye"] #main-nav.mobile-open .nav-item:hover,
+        html[data-theme="eye"] #main-nav.mobile-open .nav-item:focus-visible,
+        html[data-theme="eye"] #main-nav.mobile-open .nav-item.is-active {
+            border-color: var(--eye-accent);
+            background: rgba(138, 122, 50, 0.2);
+            color: var(--eye-headline);
+        }
+
+        html[data-theme="eye"] #main-nav.mobile-open .nav-indicator {
+            background: var(--eye-accent);
+            box-shadow: 0 0 0 6px rgba(138, 122, 50, 0.22);
+        }
+
+        html[data-theme="eye"] button,
+        html[data-theme="eye"] .read-more-btn {
+            border-radius: 10px;
+            background: transparent;
+            color: var(--eye-text-normal);
+            border-color: var(--eye-border-soft);
+        }
+
+        html[data-theme="eye"] button:hover,
+        html[data-theme="eye"] button:focus-visible,
+        html[data-theme="eye"] .read-more-btn:focus-visible {
+            background: rgba(138, 122, 50, 0.14);
+        }
+
+        html[data-theme="eye"] button:focus-visible,
+        html[data-theme="eye"] .read-more-btn:focus-visible {
+            outline: 2px solid var(--eye-focus-ring);
+            outline-offset: 2px;
+        }
+
+        html[data-theme="eye"] #eyeProtectionBtn.is-active {
+            background: rgba(140, 122, 47, 0.28);
+            color: var(--eye-text-normal);
         }
 
         /* Clean minimal blog card styling */
@@ -107,53 +260,91 @@
             gap: 0.5rem;
         }
 
-        .read-more-btn {
-            padding: 0.5rem 1rem;
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: rgba(255, 255, 255, 0.8);
-            border-radius: 4px;
-            font-size: 0.875rem;
-            transition: all 0.2s ease;
+        #main-nav.mobile-open {
+            display: flex !important;
+            flex-direction: column;
+            align-items: stretch;
+            position: fixed;
+            left: 50%;
+            top: var(--mobile-nav-top, 50%);
+            transform: translate(-50%, -50%);
+            background: rgba(12, 16, 28, 0.96);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 1.15rem;
+            padding: 1.65rem;
+            padding-bottom: calc(1.9rem + env(safe-area-inset-bottom, 0px));
+            z-index: 30;
+            width: min(24rem, calc(100vw - 1.5rem));
+            max-height: var(--mobile-nav-max-height, calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 42px));
+            overflow-y: auto;
+            overscroll-behavior: contain;
+            scrollbar-gutter: stable;
+            box-shadow: 0 32px 64px rgba(2, 6, 23, 0.55);
+        }
+
+        #main-nav.mobile-open .nav-items {
+            gap: 1.25rem;
+        }
+
+        #main-nav.mobile-open .nav-item {
+            width: 100%;
+            padding: 0.85rem 1.1rem;
+            border-radius: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            background: rgba(255, 255, 255, 0.08);
+            font-size: 0.95rem;
+            letter-spacing: 0.12em;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: rgba(241, 245, 249, 0.9);
+            text-transform: uppercase;
             text-decoration: none;
         }
 
-        .read-more-btn:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.4);
-            color: white;
+        #main-nav.mobile-open .nav-item::after {
+            display: none;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        #main-nav.mobile-open .nav-item .nav-text {
+            position: static;
+            width: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            clip: auto;
+            white-space: normal;
+            border: 0;
+            opacity: 1;
         }
 
-        .blog-card:nth-child(1) {
-            animation-delay: 0.1s;
+        #main-nav.mobile-open .nav-indicator {
+            width: 0.85rem;
+            height: 0.85rem;
+            border-radius: 9999px;
+            margin: 0;
+            background: rgba(241, 245, 249, 0.85);
+            box-shadow: 0 0 0 4px rgba(241, 245, 249, 0.12);
         }
 
-        .blog-card:nth-child(2) {
-            animation-delay: 0.2s;
+        #main-nav.mobile-open .nav-item:hover,
+        #main-nav.mobile-open .nav-item:focus-visible {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.35);
+            color: rgba(255, 255, 255, 0.95);
         }
 
-        .blog-card:nth-child(3) {
-            animation-delay: 0.3s;
+        #main-nav.mobile-open .nav-item.is-active {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(148, 163, 184, 0.28));
+            border-color: rgba(255, 255, 255, 0.45);
+            box-shadow: 0 26px 52px rgba(15, 23, 42, 0.55);
+            color: rgba(255, 255, 255, 0.95);
         }
 
-        .blog-card:nth-child(4) {
-            animation-delay: 0.4s;
-        }
-
-        .blog-card:nth-child(5) {
-            animation-delay: 0.5s;
+        #main-nav.mobile-open .nav-item.is-active .nav-indicator {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.14);
         }
 
         .tag {
@@ -385,53 +576,180 @@
             white-space: normal;
         }
 
-        /* Theme Toggle Button */
-        #theme-toggle {
-            transition: all 0.3s ease;
+        /* Page spacing to prevent button overlap */
+        main {
+            padding-top: 5rem;
+        }
+        
+        header {
+            padding-top: 6rem;
         }
 
-        #theme-toggle:hover {
-            background: rgba(255, 255, 255, 0.1);
+        /* Global chrome */
+        .top-controls {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem 0;
+            z-index: 40;
+            pointer-events: none;
         }
 
-        /* Mobile Navigation */
-        #mobile-menu-toggle {
-            transition: all 0.2s ease;
+        .top-controls .menu-toggle,
+        .top-controls .theme-toggle-group {
+            pointer-events: auto;
         }
 
-        #mobile-menu-toggle:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        #main-nav.mobile-open {
-            display: block !important;
+        .top-controls .menu-toggle {
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1rem;
-            padding: 2rem;
-            z-index: 30;
+            top: calc(env(safe-area-inset-top, 0px) + 1rem);
+            left: 1rem;
+            z-index: 50;
         }
 
-        #main-nav.mobile-open .flex {
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 1rem;
+        .top-controls .theme-toggle-group {
+            display: flex;
+            align-items: stretch;
+            border-radius: 0.9rem;
+            border: 1px solid rgba(15, 23, 42, 0.12);
+            background: transparent !important;
+            backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5);
+            -webkit-backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5);
+            overflow: visible;
+            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+            position: fixed;
+            top: env(safe-area-inset-top, 0px);
+            right: 0;
+            z-index: 45;
+            /* Squircle shape for theme toggle group */
+            clip-path: url(#squircle-theme-toggle);
+        }
+
+        .menu-toggle {
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            background: transparent !important;
+            backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5);
+            -webkit-backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5);
+            border-radius: 0.9rem;
+            padding: 0.65rem 0.95rem;
+            font-size: 1.25rem;
+            line-height: 1;
+            box-shadow: 0 14px 28px rgba(15, 23, 42, 0.16);
+            transition: background 0.2s ease, transform 0.2s ease;
+            display: flex;
+            align-items: center;
             justify-content: center;
+            min-width: 44px;
+            min-height: 44px;
+            /* Squircle shape */
+            clip-path: path('M 0,12 C 0,4 4,0 12,0 L 32,0 C 40,0 44,4 44,12 L 44,32 C 44,40 40,44 32,44 L 12,44 C 4,44 0,40 0,32 Z');
         }
 
-        #main-nav.mobile-open button {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 0.75rem;
+        html.dark .top-controls .theme-toggle-group {
+            border-color: rgba(148, 163, 184, 0.25);
+            background: transparent !important;
+            box-shadow: 0 22px 40px rgba(2, 6, 23, 0.45);
         }
 
+        html[data-theme="eye"] .top-controls .theme-toggle-group {
+            border-color: var(--eye-border-soft);
+            background: transparent !important;
+            background: rgba(232, 236, 208, 0.9);
+            box-shadow: 0 10px 22px var(--eye-shadow);
+        }
+
+        html.dark .menu-toggle {
+            border-color: rgba(148, 163, 184, 0.38);
+            background: transparent !important;
+            color: rgba(226, 232, 240, 0.95);
+            box-shadow: 0 24px 48px rgba(2, 6, 23, 0.55);
+        }
+
+        html[data-theme="eye"] .menu-toggle {
+            border-color: var(--eye-border-soft);
+            background: transparent !important;
+            color: var(--eye-text-normal);
+            box-shadow: 0 12px 24px var(--eye-shadow);
+        }
+
+        .menu-toggle:hover {
+            background: rgba(255, 255, 255, 0.96);
+        }
+
+        html.dark .menu-toggle:hover {
+            background: rgba(17, 24, 39, 0.82);
+        }
+
+        html[data-theme="eye"] .menu-toggle:hover {
+            background: rgba(138, 122, 50, 0.16);
+        }
+
+        .theme-toggle-group button {
+            position: relative;
+            padding: 0.65rem 0.95rem;
+            font-size: 1.05rem;
+            line-height: 1;
+            border: none;
+            background: transparent;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        html[data-theme="eye"] .theme-toggle-group button {
+            background: transparent;
+            color: var(--eye-text-normal);
+        }
+
+        .theme-toggle-group button + button {
+            border-left: 1px solid rgba(15, 23, 42, 0.12);
+        }
+
+        html.dark .theme-toggle-group button + button {
+            border-color: rgba(148, 163, 184, 0.22);
+        }
+
+        html[data-theme="eye"] .theme-toggle-group button + button {
+            border-color: var(--eye-border-soft);
+        }
+
+        .theme-toggle-group button:hover {
+            background: rgba(15, 23, 42, 0.08);
+        }
+
+        html.dark .theme-toggle-group button:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        html[data-theme="eye"] .theme-toggle-group button:hover {
+            background: rgba(140, 122, 47, 0.16);
+        }
+        /* Mobile Navigation */
         /* Mobile Responsive Design */
         @media (max-width: 768px) {
+            /* Page spacing - mobile */
+            main {
+                padding-top: 4rem;
+            }
+            
+            header {
+                padding-top: 5rem;
+            }
+
+            /* Compact mobile buttons */
+            .theme-toggle-group {
+                padding: 0.2rem !important;
+            }
+            
+            .theme-toggle-group button {
+                padding: 0.45rem 0.6rem !important;
+                font-size: 0.95rem !important;
+            }
+            
+            .menu-toggle {
+                padding: 0.45rem 0.6rem !important;
+                font-size: 0.95rem !important;
+            }
 
             /* Header adjustments */
             .text-6xl.lg\\:text-7xl {
@@ -529,6 +847,41 @@
                 padding-top: 2rem !important;
                 padding-bottom: 2rem !important;
             }
+
+            /* Mobile button accessibility - larger touch targets */
+            #menuBtn,
+            .theme-toggle-group button {
+                min-width: 48px !important;
+                min-height: 48px !important;
+            }
+
+            .top-controls {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+
+            .top-controls .menu-toggle {
+                left: 0.75rem;
+                top: calc(env(safe-area-inset-top, 0px) + 0.75rem);
+            }
+
+            .top-controls .theme-toggle-group {
+                right: 0.75rem;
+                top: calc(env(safe-area-inset-top, 0px) + 0.75rem);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .top-controls .menu-toggle {
+                left: 1.5rem;
+                top: calc(env(safe-area-inset-top, 0px) + 1.25rem);
+            }
+
+            .top-controls .theme-toggle-group {
+                right: 1.5rem;
+                top: calc(env(safe-area-inset-top, 0px) + 1.25rem);
+            }
+
         }
 
         /* Tablet responsive design */
@@ -629,99 +982,483 @@
             background: rgba(255, 255, 255, 0.4);
         }
 
-        /* Navigation hover tooltip labels */
-        nav button {
-            position: relative;
+        /* Navigation styles */
+        #main-nav {
+            pointer-events: auto;
         }
 
-        nav button::after {
+        #main-nav .nav-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.4rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            /* Liquid glass for desktop side nav */
+            backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5);
+            -webkit-backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5);
+        }
+
+        #main-nav .nav-item {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 0.95rem;
+            height: 3.2rem;
+            padding: 0;
+            border-radius: 9999px;
+            border: 1px solid rgba(148, 163, 184, 0.22);
+            background: rgba(148, 163, 184, 0.16);
+            color: rgba(71, 85, 105, 0.85);
+            text-decoration: none;
+            transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            overflow: visible;
+        }
+
+        #main-nav .nav-item:focus-visible {
+            outline: 2px solid rgba(15, 23, 42, 0.45);
+            outline-offset: 6px;
+        }
+
+        #main-nav .nav-item::after {
             content: attr(data-label);
             position: absolute;
-            left: 1.5rem;
+            left: calc(100% + 0.85rem);
             top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.8);
-            color: rgba(255, 255, 255, 0.9);
-            padding: 0.25rem 0.75rem;
-            border-radius: 0.375rem;
-            font-size: 0.75rem;
-            font-family: monospace;
-            white-space: nowrap;
+            transform: translate(-10px, -50%);
+            background: rgba(15, 23, 42, 0.92);
+            color: rgba(255, 255, 255, 0.92);
+            padding: 0.35rem 0.6rem;
+            border-radius: 0.45rem;
+            font-size: 0.65rem;
+            font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
             opacity: 0;
             pointer-events: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            transform: translateY(-50%) translateX(-10px);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            box-shadow: 0 22px 40px rgba(15, 23, 42, 0.3);
+            white-space: nowrap;
         }
 
-        /* Show tooltip on hover */
-        nav button:hover::after {
+        #main-nav .nav-item:hover::after,
+        #main-nav .nav-item:focus-visible::after {
             opacity: 1;
-            transform: translateY(-50%) translateX(0);
+            transform: translate(0, -50%);
         }
 
-        /* Hide tooltip when button is active */
-        nav button.bg-foreground::after {
-            display: none;
+        #main-nav .nav-text {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        #main-nav .nav-indicator {
+            width: 0.32rem;
+            height: 65%;
+            border-radius: 9999px;
+            background: rgba(100, 116, 139, 0.68);
+            transition: background 0.25s ease, transform 0.25s ease;
+        }
+
+        #main-nav .nav-item:hover,
+        #main-nav .nav-item:focus-visible {
+            border-color: rgba(148, 163, 184, 0.5);
+            background: rgba(148, 163, 184, 0.28);
+            transform: translateX(3px);
+        }
+
+        #main-nav .nav-item:hover .nav-indicator,
+        #main-nav .nav-item:focus-visible .nav-indicator {
+            background: rgba(15, 23, 42, 0.9);
+            transform: scaleY(1.1);
+        }
+
+        #main-nav .nav-item.is-active {
+            border-color: rgba(15, 23, 42, 0.5);
+            background: rgba(15, 23, 42, 0.18);
+            transform: translateX(4px);
+        }
+
+        #main-nav .nav-item.is-active .nav-indicator {
+            background: rgba(15, 23, 42, 0.98);
+            transform: scaleY(1.25);
+        }
+
+        html.dark #main-nav .nav-item {
+            border-color: rgba(148, 163, 184, 0.28);
+            background: rgba(148, 163, 184, 0.12);
+            color: rgba(203, 213, 225, 0.88);
+        }
+
+        html.dark #main-nav .nav-item::after {
+            background: rgba(15, 23, 42, 0.96);
+            color: rgba(248, 250, 252, 0.95);
+        }
+
+        html.dark #main-nav .nav-item:hover,
+        html.dark #main-nav .nav-item:focus-visible {
+            border-color: rgba(255, 255, 255, 0.38);
+            background: rgba(148, 163, 184, 0.28);
+        }
+
+        html.dark #main-nav .nav-item.is-active {
+            border-color: rgba(255, 255, 255, 0.55);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        html.dark #main-nav .nav-indicator {
+            background: rgba(226, 232, 240, 0.68);
+        }
+
+        html.dark #main-nav .nav-item:hover .nav-indicator,
+        html.dark #main-nav .nav-item:focus-visible .nav-indicator,
+        html.dark #main-nav .nav-item.is-active .nav-indicator {
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        #mobile-nav-overlay {
+            background: rgba(3, 7, 18, 0.55);
+            backdrop-filter: blur(6px);
+            transition: opacity 0.25s ease;
+        }
+
+        html[data-theme="eye"] #mobile-nav-overlay {
+            background: rgba(33, 39, 19, 0.45);
+        }
+
+        html.dark #main-nav .nav-item:hover,
+        html.dark #main-nav .nav-item:focus-visible,
+        html.dark #main-nav .nav-item.is-active {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        html.dark #main-nav .nav-item:hover .nav-indicator,
+        html.dark #main-nav .nav-item:focus-visible .nav-indicator,
+        html.dark #main-nav .nav-item.is-active .nav-indicator {
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        
+
+        #menuBtn {
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        #menuBtn:focus-visible {
+            outline: 2px solid rgba(59, 130, 246, 0.35);
+            outline-offset: 4px;
+        }
+
+        html.dark #menuBtn:focus-visible {
+            outline-color: rgba(148, 163, 184, 0.5);
+        }
+
+        html[data-theme="eye"] #menuBtn:focus-visible {
+            outline-color: var(--eye-focus-ring);
+        }
+
+        #menuBtn[aria-expanded="true"] {
+            background: rgba(15, 23, 42, 0.1);
+            transform: translateY(1px);
+        }
+
+        html.dark #menuBtn[aria-expanded="true"] {
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        html[data-theme="eye"] #menuBtn[aria-expanded="true"] {
+            background: rgba(140, 122, 47, 0.22);
+        }
+
+        @media (min-width: 1024px) {
+            #menuBtn {
+                display: none !important;
+            }
+
+            #main-nav .nav-items {
+                gap: 1.6rem;
+            }
+
+            #main-nav .nav-item {
+                width: 1.05rem;
+                height: 3.6rem;
+            }
+
+            #main-nav .nav-indicator {
+                width: 0.32rem;
+                height: 70%;
+            }
+
+            #main-nav .nav-item.is-active .nav-indicator {
+                transform: scaleY(1.28);
+            }
+
+            html.dark #main-nav .nav-item.is-active .nav-indicator {
+                background: rgba(255, 255, 255, 0.95);
+            }
+
+            #main-nav .nav-item::after {
+                content: attr(data-label);
+                position: absolute;
+                left: 1.75rem;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(15, 23, 42, 0.9);
+                color: rgba(255, 255, 255, 0.85);
+                font-size: 0.7rem;
+                font-family: 'SF Mono', Monaco, monospace;
+                letter-spacing: 0.18em;
+                padding: 0.25rem 0.5rem;
+                border-radius: 9999px;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.2s ease, transform 0.2s ease;
+                white-space: nowrap;
+            }
+
+            html.dark #main-nav .nav-item::after {
+                background: rgba(30, 41, 59, 0.95);
+            }
+
+            #main-nav .nav-item:hover::after,
+            #main-nav .nav-item:focus-visible::after,
+            #main-nav .nav-item.is-active::after {
+                opacity: 1;
+                transform: translateY(-50%) translateX(4px);
+            }
+
+            #main-nav .nav-text {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+            }
+        }
+        
+        /* ===== SVG LIQUID GLASS EFFECT (Jhey's Exact Implementation) ===== */
+        /* Apply glass effect directly to button containers */
+        
+        /* Theme toggle buttons with glass effect */
+        .theme-toggle-group {
+            backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5) !important;
+            -webkit-backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5) !important;
+            background: transparent !important; /* Pure glass, no tint */
+        }
+        
+        /* Mobile menu button with glass effect */
+        .menu-toggle {
+            backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5) !important;
+            -webkit-backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5) !important;
+            background: transparent !important; /* Pure glass, no tint */
+        }
+        
+        /* Mobile nav popup with glass effect */
+        #main-nav.mobile-open {
+            backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5) !important;
+            -webkit-backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5) !important;
+            background: transparent !important; /* Pure glass, no tint */
+        }
+        
+        /* Dark mode adjustments for glass */
+        html.dark .theme-toggle-group,
+        html.dark .menu-toggle,
+        html.dark #main-nav.mobile-open {
+            border-color: rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 
+                inset 0 0 2px 1px rgba(255, 255, 255, 0.15),
+                0 12px 32px rgba(0, 0, 0, 0.4) !important;
+        }
+        
+        /* Eye mode adjustments for glass */
+        html[data-theme="eye"] .theme-toggle-group,
+        html[data-theme="eye"] .menu-toggle,
+        html[data-theme="eye"] #main-nav.mobile-open {
+            background: transparent !important;
+        }
+        
+        /* Fallback frosted glass for non-Chromium browsers */
+        @supports not (backdrop-filter: url(#liquid-glass-filter)) {
+            .theme-toggle-group,
+            .menu-toggle,
+            #main-nav.mobile-open {
+                backdrop-filter: blur(12px) brightness(1.1) saturate(1.5) !important;
+                -webkit-backdrop-filter: blur(12px) brightness(1.1) saturate(1.5) !important;
+            }
+        }
+        
+        /* Hide SVG filter definition */
+        #liquid-glass-svg {
+            position: fixed;
+            width: 0;
+            height: 0;
+            pointer-events: none;
         }
     </style>
 </head>
 
 <body class="font-sans antialiased">
+    <!-- SVG Filter Definition for LIQUID Glass Effect (Jhey's Exact Method) -->
+    <svg id="liquid-glass-svg" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <!-- Squircle clip path for theme toggle group (approx 100x50px) -->
+            <clipPath id="squircle-theme-toggle" clipPathUnits="objectBoundingBox">
+                <path d="M 0,0.28 C 0,0.1 0.1,0 0.28,0 L 0.72,0 C 0.9,0 1,0.1 1,0.28 L 1,0.72 C 1,0.9 0.9,1 0.72,1 L 0.28,1 C 0.1,1 0,0.9 0,0.72 Z" />
+            </clipPath>
+            
+            <filter id="liquid-glass-filter" x="-100%" y="-100%" width="300%" height="300%" color-interpolation-filters="sRGB">
+                <!-- Input blur (displace parameter) - set to 0 for sharp distortion -->
+                <feGaussianBlur in="SourceGraphic" stdDeviation="0" result="blur"/>
+                
+                <!-- Displacement map from blurred source -->
+                <feColorMatrix in="blur" type="matrix" 
+                    values="1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 0 18 -7" result="map"/>
+                
+                <!-- Chromatic aberration - RED channel (strongest displacement) -->
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="-180" 
+                    xChannelSelector="R" yChannelSelector="G" result="dispRed"/>
+                <feColorMatrix in="dispRed" type="matrix" 
+                    values="1 0 0 0 0
+                            0 0 0 0 0
+                            0 0 0 0 0
+                            0 0 0 1 0" result="red"/>
+                
+                <!-- Chromatic aberration - GREEN channel (reference, least displaced) -->
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="-170" 
+                    xChannelSelector="R" yChannelSelector="G" result="dispGreen"/>
+                <feColorMatrix in="dispGreen" type="matrix" 
+                    values="0 0 0 0 0
+                            0 1 0 0 0
+                            0 0 0 0 0
+                            0 0 0 1 0" result="green"/>
+                
+                <!-- Chromatic aberration - BLUE channel (medium displacement) -->
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="-160" 
+                    xChannelSelector="R" yChannelSelector="G" result="dispBlue"/>
+                <feColorMatrix in="dispBlue" type="matrix" 
+                    values="0 0 0 0 0
+                            0 0 0 0 0
+                            0 0 1 0 0
+                            0 0 0 1 0" result="blue"/>
+                
+                <!-- Blend channels back together -->
+                <feBlend in="red" in2="green" mode="screen" result="rg"/>
+                <feBlend in="rg" in2="blue" mode="screen" result="output"/>
+                
+                <!-- Turbulence for liquid effect -->
+                <feTurbulence type="fractalNoise" baseFrequency="0.005 0.01" 
+                    numOctaves="2" result="turbulence"/>
+                <feDisplacementMap in="output" in2="turbulence" scale="20" 
+                    xChannelSelector="R" yChannelSelector="G" result="liquid"/>
+                
+                <!-- Final blur for smoothness -->
+                <feGaussianBlur in="liquid" stdDeviation="0.7"/>
+            </filter>
+        </defs>
+    </svg>
     <div
         class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm group-hover:border-muted-foreground/40 transition-colors duration-500 font-mono border-0">
         <!-- Skip Navigation Link for Accessibility -->
         <a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
-        
-        <!-- Mobile Menu Toggle -->
-        <button id="mobile-menu-toggle"
-            class="fixed top-4 left-4 z-20 lg:hidden p-2 rounded-lg bg-background/80 backdrop-blur-sm border border-border/50">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                </path>
-            </svg>
-        </button>
-        
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" 
-            class="fixed top-4 right-4 z-20 lg:block p-2 rounded-lg bg-background/80 backdrop-blur-sm border border-border/50"
-            aria-label="Toggle dark/light mode" 
-            title="Toggle dark/light mode">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-            </svg>
-        </button>
+        <div class="top-controls">
+            <!-- Mobile Menu Toggle -->
+            <button id="menuBtn"
+                class="menu-toggle lg:hidden text-lg font-medium"
+                aria-label="Menu" aria-haspopup="true" aria-controls="main-nav" aria-expanded="false">
+                𝛯
+            </button>
+
+            <!-- Split Theme Toggle -->
+            <div class="theme-toggle-group" role="group" aria-label="Theme controls">
+                <!-- Eye Protection Toggle -->
+                <button id="eyeProtectionBtn"
+                    class="text-lg font-medium"
+                    aria-label="Toggle eye protection"
+                    title="Eye protection mode">
+                    ͼ
+                </button>
+                <!-- Light/Dark Toggle -->
+                <button id="themeBtn"
+                    class="text-lg font-medium"
+                    aria-label="Toggle light/dark"
+                    title="Toggle light/dark">
+                    ☀︎
+                </button>
+            </div>
+        </div>
 
         <!-- Mobile Navigation Overlay -->
         <div id="mobile-nav-overlay" class="fixed inset-0 bg-black/50 z-15 lg:hidden hidden"></div>
 
-        <nav id="main-nav" class="fixed left-8 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
-            <div class="flex flex-col gap-4">
-                <button onclick="window.location.href='index.html#intro'"
-                    class="w-2 h-8 rounded-full transition-all duration-500 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                    aria-label="Navigate to intro" data-label="intro"></button>
-                <button onclick="window.location.href='index.html#education'"
-                    class="w-2 h-8 rounded-full transition-all duration-500 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                    aria-label="Navigate to education" data-label="education"></button>
-                <button onclick="window.location.href='index.html#experience'"
-                    class="w-2 h-8 rounded-full transition-all duration-500 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                    aria-label="Navigate to experience" data-label="experience"></button>
-                <button onclick="window.location.href='index.html#projects'"
-                    class="w-2 h-8 rounded-full transition-all duration-500 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                    aria-label="Navigate to projects" data-label="projects"></button>
-                <button onclick="window.location.href='index.html#skills'"
-                    class="w-2 h-8 rounded-full transition-all duration-500 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                    aria-label="Navigate to skills" data-label="skills"></button>
-                <button onclick="window.location.href='index.html#achievements'"
-                    class="w-2 h-8 rounded-full transition-all duration-500 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                    aria-label="Navigate to achievements" data-label="achievements"></button>
-                <button class="w-2 h-8 rounded-full transition-all duration-500 bg-foreground"
-                    aria-label="Navigate to blog" data-label="blog"></button>
-                <button onclick="window.location.href='index.html#connect'"
-                    class="w-2 h-8 rounded-full transition-all duration-500 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                    aria-label="Navigate to connect" data-label="connect"></button>
-            </div>
+        <nav id="main-nav" class="main-nav fixed left-8 top-1/2 -translate-y-1/2 z-10 hidden lg:flex" aria-label="Primary navigation" tabindex="-1">
+            <ul class="nav-items">
+                <li>
+                    <a href="index.html#intro" class="nav-item" data-nav-item data-label="Intro" aria-label="Intro">
+                        <span class="nav-indicator" aria-hidden="true"></span>
+                        <span class="nav-text">Intro</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#education" class="nav-item" data-nav-item data-label="Education" aria-label="Education">
+                        <span class="nav-indicator" aria-hidden="true"></span>
+                        <span class="nav-text">Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#experience" class="nav-item" data-nav-item data-label="Experience" aria-label="Experience">
+                        <span class="nav-indicator" aria-hidden="true"></span>
+                        <span class="nav-text">Experience</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#projects" class="nav-item" data-nav-item data-label="Projects" aria-label="Projects">
+                        <span class="nav-indicator" aria-hidden="true"></span>
+                        <span class="nav-text">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#skills" class="nav-item" data-nav-item data-label="Skills" aria-label="Skills">
+                        <span class="nav-indicator" aria-hidden="true"></span>
+                        <span class="nav-text">Skills</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#achievements" class="nav-item" data-nav-item data-label="Achievements" aria-label="Achievements">
+                        <span class="nav-indicator" aria-hidden="true"></span>
+                        <span class="nav-text">Achievements</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#main-content" class="nav-item is-active" data-nav-item data-label="Blog" aria-current="true" aria-label="Blog">
+                        <span class="nav-indicator" aria-hidden="true"></span>
+                        <span class="nav-text">Blog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#connect" class="nav-item" data-nav-item data-label="Connect" aria-label="Connect">
+                        <span class="nav-indicator" aria-hidden="true"></span>
+                        <span class="nav-text">Connect</span>
+                    </a>
+                </li>
+            </ul>
         </nav>
 
         <main id="main-content" class="max-w-4xl mx-auto px-8 lg:px-16">
@@ -869,50 +1606,104 @@
 
     <!-- Theme Toggle Script -->
     <script>
-        // Theme Toggle Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const themeToggle = document.getElementById('theme-toggle');
-            
-            // Check for saved theme preference or respect system preference
-            const getPreferredTheme = () => {
-                const storedTheme = localStorage.getItem('theme');
-                if (storedTheme) {
-                    return storedTheme;
+        (function () {
+            const THEME_STORAGE_KEY = 'theme';
+            const BASE_THEME_STORAGE_KEY = 'baseTheme';
+            const htmlElement = document.documentElement;
+            const themeToggle = document.getElementById('themeBtn');
+            const eyeProtectionBtn = document.getElementById('eyeProtectionBtn');
+            const themeMeta = document.querySelector('meta[name="theme-color"]');
+            const prefersDarkMedia = window.matchMedia('(prefers-color-scheme: dark)');
+
+            const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+            const storedBaseTheme = localStorage.getItem(BASE_THEME_STORAGE_KEY);
+            const systemPrefersDark = prefersDarkMedia.matches;
+
+            let baseTheme = storedBaseTheme === 'light' || storedBaseTheme === 'dark'
+                ? storedBaseTheme
+                : (systemPrefersDark ? 'dark' : 'light');
+
+            let activeTheme = storedTheme === 'eye'
+                ? 'eye'
+                : (storedTheme === 'light' || storedTheme === 'dark' ? storedTheme : baseTheme);
+
+            const updateButtons = () => {
+                if (themeToggle) {
+                    const isDarkMode = activeTheme === 'dark';
+                    themeToggle.textContent = isDarkMode ? '☀︎' : '☽';
+                    themeToggle.setAttribute('aria-pressed', String(isDarkMode));
                 }
-                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+                if (eyeProtectionBtn) {
+                    const isEyeMode = activeTheme === 'eye';
+                    eyeProtectionBtn.textContent = isEyeMode ? '👁' : 'ͼ';
+                    eyeProtectionBtn.classList.toggle('is-active', isEyeMode);
+                    eyeProtectionBtn.setAttribute('aria-pressed', String(isEyeMode));
+                }
             };
-            
-            // Set the initial theme
-            const setTheme = (theme) => {
+
+            const syncMetaTheme = (theme) => {
+                if (!themeMeta) return;
+                const color = theme === 'dark' ? '#0a0a0a' : (theme === 'eye' ? '#F7F3E9' : '#ffffff');
+                themeMeta.setAttribute('content', color);
+            };
+
+            const notifyCommentsTheme = (theme) => {
+                if (window.CommentsApp && typeof window.CommentsApp.updateTheme === 'function') {
+                    window.CommentsApp.updateTheme(theme === 'dark' ? 'dark_high_contrast' : 'light');
+                }
+            };
+
+            const applyTheme = (theme, { persist = true } = {}) => {
+                activeTheme = theme;
+
                 if (theme === 'dark') {
-                    document.documentElement.classList.add('dark');
-                    // Update theme-color meta tag for mobile browsers
-                    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0a0a0a');
+                    htmlElement.dataset.theme = 'dark';
+                    htmlElement.classList.add('dark');
                 } else {
-                    document.documentElement.classList.remove('dark');
-                    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff');
+                    htmlElement.dataset.theme = theme;
+                    htmlElement.classList.remove('dark');
                 }
-                localStorage.setItem('theme', theme);
+
+                if (persist) {
+                    localStorage.setItem(THEME_STORAGE_KEY, theme);
+                    localStorage.setItem(BASE_THEME_STORAGE_KEY, baseTheme);
+                }
+
+                syncMetaTheme(theme);
+                notifyCommentsTheme(theme);
+                updateButtons();
             };
-            
-            // Initialize theme
-            const currentTheme = getPreferredTheme();
-            setTheme(currentTheme);
-            
-            if (themeToggle) {
-                themeToggle.addEventListener('click', () => {
-                    const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-                    setTheme(newTheme);
-                });
-            }
-            
-            // Listen for system theme changes
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-                if (!localStorage.getItem('theme')) {
-                    setTheme(e.matches ? 'dark' : 'light');
+
+            applyTheme(activeTheme, { persist: false });
+
+            themeToggle?.addEventListener('click', () => {
+                const nextTheme = activeTheme === 'dark' ? 'light' : 'dark';
+                baseTheme = nextTheme;
+                applyTheme(nextTheme);
+            });
+
+            eyeProtectionBtn?.addEventListener('click', () => {
+                if (activeTheme === 'eye') {
+                    applyTheme(baseTheme);
+                } else {
+                    applyTheme('eye');
                 }
             });
-        });
+
+            prefersDarkMedia.addEventListener('change', (event) => {
+                const stored = localStorage.getItem(THEME_STORAGE_KEY);
+                baseTheme = event.matches ? 'dark' : 'light';
+
+                if (!stored || stored === 'light' || stored === 'dark') {
+                    if (activeTheme !== 'eye') {
+                        applyTheme(baseTheme);
+                    } else {
+                        localStorage.setItem(BASE_THEME_STORAGE_KEY, baseTheme);
+                    }
+                }
+            });
+        })();
     </script>
 
     <!-- Blog JavaScript -->

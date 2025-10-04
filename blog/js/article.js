@@ -50,10 +50,72 @@ const ArticleApp = (() => {
         articleContainer?.classList.remove('hidden');
     };
 
-    // Get article ID from URL parameters
-    const getArticleId = () => {
+    // Cache for article index lookups
+    let articleIndexCache = null;
+    let articleIndexPromise = null;
+
+    // Get article identifier from URL parameters
+    const getArticleIdentifier = () => {
         const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get('id');
+        return {
+            id: urlParams.get('id'),
+            slug: urlParams.get('slug')
+        };
+    };
+
+    const fetchArticleIndex = async () => {
+        if (articleIndexCache) {
+            return articleIndexCache;
+        }
+
+        if (!articleIndexPromise) {
+            articleIndexPromise = fetch('blog/data/articles.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to load article index: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const articles = Array.isArray(data?.articles) ? data.articles : [];
+                    articleIndexCache = articles;
+                    return articles;
+                })
+                .catch(error => {
+                    console.error('Failed to fetch article index:', error);
+                    articleIndexPromise = null;
+                    throw error;
+                });
+        }
+
+        return articleIndexPromise;
+    };
+
+    const resolveArticleId = async () => {
+        const { id, slug } = getArticleIdentifier();
+
+        if (id) {
+            return id;
+        }
+
+        if (!slug) {
+            return null;
+        }
+
+        try {
+            const articles = await fetchArticleIndex();
+            const normalizedSlug = slug.trim().toLowerCase();
+            const match = articles.find(article => {
+                const articleSlug = article.slug?.toLowerCase();
+                const articleId = article.id?.toLowerCase();
+                return articleSlug === normalizedSlug || articleId === normalizedSlug;
+            });
+
+            return match?.id || null;
+        } catch (error) {
+            console.error('Error resolving article ID from slug:', error);
+            return null;
+        }
     };
 
     // Format date for display
@@ -272,9 +334,14 @@ const ArticleApp = (() => {
     };
 
     // Retry loading article
-    const retry = () => {
-        const articleId = getArticleId();
-        loadArticle(articleId);
+    const retry = async () => {
+        const articleId = await resolveArticleId();
+        if (!articleId) {
+            showError();
+            return;
+        }
+
+        await loadArticle(articleId);
     };
 
     // Mobile-specific optimizations
@@ -326,18 +393,18 @@ const ArticleApp = (() => {
     };
 
     // Initialize the article app
-    const init = () => {
+    const init = async () => {
         console.log('Article app initialized');
         initDOMElements();
         setupMobileOptimizations();
 
-        const articleId = getArticleId();
+        const articleId = await resolveArticleId();
         if (!articleId) {
             showError();
             return;
         }
 
-        loadArticle(articleId);
+        await loadArticle(articleId);
     };
 
     // Make retry function available globally

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Portfolio website for Prajyoth Reddy -->
-<html lang="en" class="__variable_e8ce0c dark">
+<html lang="en" class="__variable_e8ce0c dark" data-theme="dark">
 
 <head>
     <meta charset="utf-8">
@@ -11,8 +11,6 @@
         data-precedence="next">
     <link rel="stylesheet" href="https://mpr-hosting-static-files.vercel.app/_next/static/css/af5f735e1b8a2a31.css"
         data-precedence="next">
-    <link rel="preload" as="script" fetchpriority="low"
-        href="https://mpr-hosting-static-files.vercel.app/_next/static/chunks/webpack-6f9be263bb1990d1.js">
     <script src="https://mpr-hosting-static-files.vercel.app/_next/static/chunks/4bd1b696-5b2b1e7b5478d01a.js"
         async=""></script>
     <script src="https://mpr-hosting-static-files.vercel.app/_next/static/chunks/684-63f224e222f12fd5.js"
@@ -22,13 +20,15 @@
     <script src="https://mpr-hosting-static-files.vercel.app/_next/static/chunks/app/page-6fba851c656996c8.js"
         async=""></script>
     <meta name="next-size-adjust" content="">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24' fill='%23666'>P</text></svg>" type="image/svg+xml">
+    <meta name="generator" content="v0.app">
+    <script src="https://mpr-hosting-static-files.vercel.app/_next/static/chunks/polyfills-42372ed130431b0a.js"
+        nomodule=""></script>
     <title>Prajyoth Reddy - Electronics &amp; Communications Engineering Student</title>
     <meta name="description"
         content="Electronics &amp; Communications Engineering student, passionate about Deep Learning, Robotics &amp; Full-Stack Development. Tinkering fulltime.">
-    <meta name="generator" content="v0.app">
     <meta name="theme-color" content="#0a0a0a">
-    <script src="https://mpr-hosting-static-files.vercel.app/_next/static/chunks/polyfills-42372ed130431b0a.js"
-        nomodule=""></script>
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
@@ -67,45 +67,190 @@
             display: none !important;
         }
 
-
-
-
-
-        /* Mobile Navigation */
-        #mobile-menu-toggle {
-            transition: all 0.2s ease;
+        :root {
+            --eye-bg-main: #F7F8EC;
+            --eye-bg-subtle: #EEF3DA;
+            --eye-surface: #E6EBC8;
+            --eye-text-normal: #303620;
+            --eye-text-muted: #5E684F;
+            --eye-headline: #212713;
+            --eye-accent: #8A7A32;
+            --eye-accent-soft: rgba(138, 122, 50, 0.18);
+            --eye-border-soft: #CBD4AF;
+            --eye-border-strong: #B9C495;
+            --eye-shadow: rgba(44, 56, 31, 0.12);
+            --eye-focus-ring: rgba(138, 122, 50, 0.32);
         }
 
-        #mobile-menu-toggle:hover {
-            background: rgba(255, 255, 255, 0.1);
+        html[data-theme="eye"] {
+            background: var(--eye-bg-main);
+            color: var(--eye-text-normal);
+            filter: sepia(14%) saturate(88%) hue-rotate(354deg) brightness(1.02);
+            -webkit-font-smoothing: antialiased;
+            color-scheme: light;
         }
 
-        #main-nav.mobile-open {
-            display: block !important;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1rem;
-            padding: 2rem;
-            z-index: 30;
+        html[data-theme="eye"] body {
+            background: var(--eye-bg-main);
+            color: var(--eye-text-normal);
         }
 
-        #main-nav.mobile-open .flex {
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
+        html[data-theme="eye"] main,
+        html[data-theme="eye"] .page-shell,
+        html[data-theme="eye"] .content-surface {
+            background: var(--eye-bg-main);
         }
 
-        #main-nav.mobile-open button {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 0.75rem;
+        html[data-theme="eye"] section,
+        html[data-theme="eye"] header,
+        html[data-theme="eye"] .section {
+            background: var(--eye-bg-subtle);
+            border-color: var(--eye-border-soft);
+            box-shadow: 0 12px 26px var(--eye-shadow);
         }
+        
+        /* Main content spacing to avoid button overlap */
+        main {
+            padding-top: 5rem; /* Space for fixed buttons */
+        }
+        
+        /* First section spacing */
+        header#intro {
+            padding-top: 6rem !important;
+        }
+        
+        @media (max-width: 767px) {
+            main {
+                padding-top: 4rem;
+            }
+            
+            header#intro {
+                padding-top: 5rem !important;
+            }
+        }
+
+        html[data-theme="eye"] .text-muted-foreground,
+        html[data-theme="eye"] .font-mono.text-muted-foreground,
+        html[data-theme="eye"] .text-muted-foreground.font-sans {
+            color: var(--eye-text-muted) !important;
+        }
+
+        html[data-theme="eye"] h1,
+        html[data-theme="eye"] h2,
+        html[data-theme="eye"] h3,
+        html[data-theme="eye"] h4,
+        html[data-theme="eye"] h5,
+        html[data-theme="eye"] h6 {
+            color: var(--eye-headline);
+        }
+
+        html[data-theme="eye"] a,
+        html[data-theme="eye"] a:hover {
+            color: var(--eye-accent);
+        }
+
+        html[data-theme="eye"] .card,
+        html[data-theme="eye"] .feature-tile,
+        html[data-theme="eye"] .blog-card,
+        html[data-theme="eye"] .achievement-badge,
+        html[data-theme="eye"] .neo-surface {
+            background: var(--eye-surface);
+            border-color: var(--eye-border-soft);
+            box-shadow: 0 10px 22px var(--eye-shadow);
+        }
+
+        html[data-theme="eye"] #main-nav {
+            color: var(--eye-text-muted);
+        }
+
+        html[data-theme="eye"] #main-nav {
+            color: var(--eye-text-muted);
+        }
+
+        html[data-theme="eye"] #main-nav .nav-item {
+            border-color: var(--eye-border-soft);
+            background: rgba(234, 238, 212, 0.7);
+            color: var(--eye-text-muted);
+        }
+
+        html[data-theme="eye"] #main-nav .nav-item:hover,
+        html[data-theme="eye"] #main-nav .nav-item:focus-visible,
+        html[data-theme="eye"] #main-nav .nav-item.is-active {
+            border-color: var(--eye-accent);
+            background: rgba(138, 122, 50, 0.22);
+            color: var(--eye-headline);
+        }
+
+        html[data-theme="eye"] #main-nav .nav-indicator {
+            background: var(--eye-border-soft);
+        }
+
+        html[data-theme="eye"] #main-nav .nav-item:hover .nav-indicator,
+        html[data-theme="eye"] #main-nav .nav-item:focus-visible .nav-indicator,
+        html[data-theme="eye"] #main-nav .nav-item.is-active .nav-indicator {
+            background: var(--eye-accent);
+        }
+
+        html[data-theme="eye"] #main-nav .nav-item::after {
+            background: rgba(48, 56, 32, 0.94);
+            color: var(--eye-bg-main);
+        }
+
+        html[data-theme="eye"] #main-nav.mobile-open {
+            background: rgba(232, 236, 208, 0.96);
+            border-color: var(--eye-border-soft);
+            box-shadow: 0 28px 48px rgba(44, 56, 31, 0.3);
+        }
+
+        html[data-theme="eye"] #main-nav.mobile-open .nav-item {
+            background: rgba(234, 238, 212, 0.86);
+            border-color: var(--eye-border-soft);
+            color: var(--eye-text-normal);
+        }
+
+        html[data-theme="eye"] #main-nav.mobile-open .nav-item:hover,
+        html[data-theme="eye"] #main-nav.mobile-open .nav-item:focus-visible,
+        html[data-theme="eye"] #main-nav.mobile-open .nav-item.is-active {
+            border-color: var(--eye-accent);
+            background: rgba(138, 122, 50, 0.2);
+            color: var(--eye-headline);
+        }
+
+        html[data-theme="eye"] #main-nav.mobile-open .nav-indicator {
+            background: var(--eye-accent);
+            box-shadow: 0 0 0 6px rgba(138, 122, 50, 0.22);
+        }
+
+        html[data-theme="eye"] button,
+        html[data-theme="eye"] .back-button {
+            border-radius: 10px;
+            background: transparent;
+            color: var(--eye-text-normal);
+            border-color: var(--eye-border-soft);
+        }
+
+        html[data-theme="eye"] button:hover,
+        html[data-theme="eye"] button:focus-visible {
+            background: rgba(138, 122, 50, 0.14);
+        }
+
+        html[data-theme="eye"] button:focus-visible,
+        html[data-theme="eye"] .back-button:focus-visible {
+            outline: 2px solid var(--eye-focus-ring);
+            outline-offset: 2px;
+        }
+
+        html[data-theme="eye"] button:focus-visible,
+        html[data-theme="eye"] .back-button:focus-visible {
+            outline: 2px solid var(--eye-accent);
+            outline-offset: 2px;
+        }
+
+        html[data-theme="eye"] #eyeProtectionBtn.is-active {
+            background: rgba(167, 138, 74, 0.22);
+            color: var(--eye-text-normal);
+        }
+
 
         /* Screen reader only class for accessibility */
         .sr-only {
@@ -130,13 +275,135 @@
             white-space: normal;
         }
 
-        /* Theme Toggle Button */
-        #theme-toggle {
-            transition: all 0.3s ease;
+        /* Global chrome */
+        .top-controls {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem 0;
+            z-index: 40;
+            pointer-events: none;
         }
 
-        #theme-toggle:hover {
-            background: rgba(255, 255, 255, 0.1);
+        .top-controls .menu-toggle,
+        .top-controls .theme-toggle-group {
+            pointer-events: auto;
+        }
+
+        .top-controls .menu-toggle {
+            position: fixed;
+            top: calc(env(safe-area-inset-top, 0px) + 1rem);
+            left: 1rem;
+            z-index: 50;
+        }
+
+        .top-controls .theme-toggle-group {
+            display: flex;
+            align-items: stretch;
+            border-radius: 0.9rem;
+            border: 1px solid rgba(15, 23, 42, 0.12);
+            background: transparent !important; /* Glass effect, no solid background */
+            backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5);
+            -webkit-backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5);
+            overflow: visible;
+            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+            position: fixed;
+            top: env(safe-area-inset-top, 0px);
+            right: 0;
+            z-index: 45;
+            /* Squircle shape for theme toggle group */
+            clip-path: url(#squircle-theme-toggle);
+        }
+
+        .menu-toggle {
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            background: rgba(248, 250, 252, 0.88);
+            backdrop-filter: blur(14px);
+            border-radius: 0.9rem;
+            padding: 0.65rem 0.95rem;
+            font-size: 1.25rem;
+            line-height: 1;
+            box-shadow: 0 14px 28px rgba(15, 23, 42, 0.16);
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        html.dark .top-controls .theme-toggle-group {
+            border-color: rgba(148, 163, 184, 0.25);
+            background: transparent !important; /* Glass effect, no solid background */
+            box-shadow: 0 22px 40px rgba(2, 6, 23, 0.45);
+        }
+
+        html[data-theme="eye"] .top-controls .theme-toggle-group {
+            border-color: var(--eye-border-soft);
+            background: transparent !important; /* Glass effect, no solid background */
+            box-shadow: 0 10px 22px var(--eye-shadow);
+        }
+
+        html.dark .menu-toggle {
+            border-color: rgba(148, 163, 184, 0.38);
+            background: rgba(2, 6, 23, 0.76);
+            color: rgba(226, 232, 240, 0.95);
+            box-shadow: 0 24px 48px rgba(2, 6, 23, 0.55);
+        }
+
+        html[data-theme="eye"] .menu-toggle {
+            border-color: var(--eye-border-soft);
+            background: rgba(234, 238, 212, 0.92);
+            color: var(--eye-text-normal);
+            box-shadow: 0 12px 24px var(--eye-shadow);
+        }
+
+        .menu-toggle:hover {
+            background: rgba(255, 255, 255, 0.96);
+        }
+
+        html.dark .menu-toggle:hover {
+            background: rgba(17, 24, 39, 0.82);
+        }
+
+        html[data-theme="eye"] .menu-toggle:hover {
+            background: rgba(138, 122, 50, 0.16);
+        }
+
+        .theme-toggle-group button {
+            position: relative;
+            padding: 0.65rem 0.95rem;
+            font-size: 1.05rem;
+            line-height: 1;
+            border: none;
+            background: transparent;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        html[data-theme="eye"] .theme-toggle-group button {
+            background: transparent;
+            color: var(--eye-text-normal);
+        }
+
+        .theme-toggle-group button + button {
+            border-left: 1px solid rgba(15, 23, 42, 0.12);
+        }
+
+        html.dark .theme-toggle-group button + button {
+            border-color: rgba(148, 163, 184, 0.22);
+        }
+
+        html[data-theme="eye"] .theme-toggle-group button + button {
+            border-color: var(--eye-border-soft);
+        }
+
+        .theme-toggle-group button:hover {
+            background: rgba(15, 23, 42, 0.08);
+        }
+
+        html.dark .theme-toggle-group button:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        html[data-theme="eye"] .theme-toggle-group button:hover {
+            background: rgba(140, 122, 47, 0.16);
         }
 
         /* Animation keyframes */
@@ -197,14 +464,16 @@
             background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
         }
 
-        /* Smooth scrolling with gentle snapping */
-        html {
-            scroll-behavior: smooth;
-            scroll-snap-type: y proximity;
-        }
+        /* Smooth scrolling with gentle snapping - Desktop only */
+        @media (min-width: 768px) {
+            html {
+                scroll-behavior: smooth;
+                scroll-snap-type: y proximity;
+            }
 
-        body {
-            scroll-snap-type: y proximity;
+            body {
+                scroll-snap-type: y proximity;
+            }
         }
 
         /* Section fade animations with gentle snapping */
@@ -243,119 +512,702 @@
             position: relative;
         }
         
-        /* Disable scroll snapping on mobile devices for better scrolling experience */
+        /* Mobile-specific optimizations */
         @media (max-width: 767.98px) {
             html {
-                scroll-behavior: auto !important;
+                scroll-behavior: auto;
+                /* Prevent horizontal scroll on mobile */
+                overflow-x: hidden;
             }
             
             body {
-                scroll-snap-type: none !important;
+                /* Ensure smooth mobile scrolling */
+                -webkit-overflow-scrolling: touch;
+                overflow-x: hidden;
             }
             
             section,
             header {
-                scroll-snap-align: none !important;
-                transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out !important;
+                scroll-snap-align: none;
+                transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+                /* Allow section lighting to work on mobile */
+                opacity: 0.4;
+                transform: translateY(10px);
+                /* Prevent layout shifts */
+                min-height: auto;
+            }
+            
+            /* Mobile section active states */
+            section.section-active,
+            header.section-active {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+            }
+
+            section.section-entering,
+            header.section-entering {
+                opacity: 0.7 !important;
+                transform: translateY(5px) !important;
+            }
+
+            section.section-leaving,
+            header.section-leaving {
+                opacity: 0.3 !important;
+                transform: translateY(15px) !important;
+            }
+            
+            /* Ensure mobile navigation doesn't interfere with scroll */
+            main {
+                scroll-snap-type: none;
+                /* Prevent horizontal overflow */
+                overflow-x: hidden;
+            }
+            
+            /* Mobile-specific layout adjustments */
+            .max-w-4xl {
+                max-width: 100%;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            /* Mobile button accessibility - larger touch targets */
+            #menuBtn,
+            .theme-toggle-group button {
+                min-width: 48px !important;
+                min-height: 48px !important;
+            }
+            
+            /* Reduce padding on theme toggle buttons for mobile */
+            .theme-toggle-group button {
+                padding: 0.45rem 0.6rem !important;
+                font-size: 0.95rem !important;
+            }
+            
+            /* Remove container padding on mobile for compact size */
+            .top-controls .theme-toggle-group {
+                padding: 0.2rem !important;
+            }
+
+            .top-controls {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+
+            .top-controls .menu-toggle {
+                left: 0.75rem;
+                top: calc(env(safe-area-inset-top, 0px) + 0.75rem);
+            }
+
+            .top-controls .theme-toggle-group {
+                right: 0;
+                top: env(safe-area-inset-top, 0px);
             }
         }
 
-        /* Hover tooltip labels */
-        nav button::after {
-            content: attr(data-label);
-            position: absolute;
-            left: 1.5rem;
+        @media (min-width: 1024px) {
+            .top-controls .menu-toggle {
+                left: 1.5rem;
+                top: calc(env(safe-area-inset-top, 0px) + 1.25rem);
+            }
+
+            .top-controls .theme-toggle-group {
+                right: 0;
+                top: env(safe-area-inset-top, 0px);
+            }
+        }
+
+
+
+        /* ===== GRAYSCALE OVERRIDES ===== */
+        
+        /* Force pure grayscale - override any blue from framework */
+        :root {
+            --chart-1: #a6a6a6; /* Remove blue from charts */
+            --sidebar-primary: #707070; /* Pure gray instead of blue */
+            /* Override any framework blues */
+            --color-blue-400: #b4b4b4; /* Pure gray */
+            --color-blue-500: #9f9f9f; /* Pure gray */
+            --color-blue-600: #8b8b8b; /* Pure gray */
+            --color-sky-500: #afafaf; /* Pure gray */
+        }
+        
+        .dark {
+            --chart-1: #b5b5b5; /* Pure gray for dark mode */
+            --sidebar-primary: #b5b5b5; /* Pure gray instead of blue */
+            /* Override any framework blues in dark mode */
+            --color-blue-400: #cdcdcd; /* Light gray for dark mode */
+            --color-blue-500: #b9b9b9; /* Light gray for dark mode */
+            --color-blue-600: #a6a6a6; /* Light gray for dark mode */
+            --color-sky-500: #c8c8c8; /* Light gray for dark mode */
+        }
+        
+        /* Ensure navigation never uses blue */
+        #main-nav *, #mobile-nav *, #mobile-menu-btn {
+            --tw-border-opacity: 1 !important;
+            border-color: rgba(148, 163, 184, var(--tw-border-opacity, 1)) !important;
+        }
+        
+        html.dark #main-nav *, html.dark #mobile-nav *, html.dark #mobile-menu-btn {
+            border-color: rgba(226, 232, 240, 0.3) !important;
+        }
+        
+        /* ===== MODERN THEME-AWARE NAVIGATION SYSTEM ===== */
+        
+        /* Desktop Navigation - Subtle & Theme-Aware */
+        #main-nav {
+            position: fixed;
+            left: 1.75rem;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.8);
-            color: rgba(255, 255, 255, 0.9);
-            padding: 0.25rem 0.75rem;
-            border-radius: 0.375rem;
+            z-index: 35;
+            display: none;
+            opacity: 0.4;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            will-change: opacity, transform;
+        }
+        
+        #main-nav:hover {
+            opacity: 1;
+            transform: translateY(-50%) scale(1.05);
+        }
+        
+        @media (min-width: 1024px) {
+            #main-nav {
+                display: block;
+            }
+        }
+        
+        #main-nav .nav-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            list-style: none;
+            margin: 0;
+            padding: 0.75rem;
+            background: transparent !important;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 1rem;
+            backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5);
+            -webkit-backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5);
+            box-shadow: 0 8px 32px rgba(15, 23, 42, 0.1);
+        }
+        
+        /* Light theme nav items */
+        .nav-item {
+            position: relative;
+            display: block;
+            width: 2.5px;
+            height: 2.5rem;
+            background: rgba(148, 163, 184, 0.25);
+            border-radius: 2px;
+            text-decoration: none;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        
+        .nav-item:hover {
+            background: rgba(100, 116, 139, 0.7);
+            width: 3px;
+        }
+        
+        .nav-item.is-active {
+            background: rgba(71, 85, 105, 0.9);
+            width: 3.5px;
+            height: 3rem;
+        }
+        
+        /* Tooltips for desktop - theme-aware */
+        .nav-item::after {
+            content: attr(data-label);
+            position: absolute;
+            left: 1.75rem;
+            top: 50%;
+            transform: translateY(-50%) scale(0.95);
+            background: rgba(15, 23, 42, 0.95);
+            color: rgba(248, 250, 252, 0.95);
+            padding: 0.6rem 0.9rem;
+            border-radius: 8px;
             font-size: 0.75rem;
-            font-family: monospace;
+            font-weight: 500;
             white-space: nowrap;
             opacity: 0;
             pointer-events: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            transform: translateY(-50%) translateX(-10px);
-            backdrop-filter: blur(10px);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
-        /* Show tooltip on hover */
-        nav button:hover::after {
+        
+        .nav-item:hover::after {
             opacity: 1;
-            transform: translateY(-50%) translateX(0);
+            transform: translateY(-50%) scale(1);
         }
-
-        /* Hide tooltip when button is active */
-        nav button.bg-foreground::after {
+        
+        /* Dark theme navigation */
+        html.dark #main-nav .nav-items {
+            background: transparent !important;
+            border-color: rgba(148, 163, 184, 0.3);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        html.dark .nav-item {
+            background: rgba(226, 232, 240, 0.3);
+        }
+        
+        html.dark .nav-item:hover {
+            background: rgba(226, 232, 240, 0.6);
+        }
+        
+        html.dark .nav-item.is-active {
+            background: rgba(248, 250, 252, 0.9);
+        }
+        
+        html.dark .nav-item::after {
+            background: rgba(248, 250, 252, 0.95);
+            color: rgba(15, 23, 42, 0.9);
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Eye protection theme navigation */
+        html[data-theme="eye"] #main-nav .nav-items {
+            background: transparent !important;
+            border-color: var(--eye-border-soft);
+            box-shadow: 0 10px 28px var(--eye-shadow);
+        }
+        
+        html[data-theme="eye"] .nav-item {
+            background: rgba(138, 122, 50, 0.3);
+        }
+        
+        html[data-theme="eye"] .nav-item:hover {
+            background: rgba(138, 122, 50, 0.6);
+        }
+        
+        html[data-theme="eye"] .nav-item.is-active {
+            background: var(--eye-accent);
+        }
+        
+        html[data-theme="eye"] .nav-item::after {
+            background: rgba(48, 56, 32, 0.95);
+            color: var(--eye-bg-main);
+            border-color: var(--eye-border-soft);
+        }
+        
+        /* Mobile Navigation Button - Theme-aware with custom icon */
+        #mobile-menu-btn {
+            position: fixed;
+            top: calc(env(safe-area-inset-top, 0px) + 1rem);
+            left: 1rem;
+            z-index: 60;
+            background: transparent !important; /* Force transparent for glass effect */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0.9rem;
+            padding: 0.7rem;
+            cursor: pointer;
+            display: block;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1;
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 
+                inset 0 1px 1px rgba(255, 255, 255, 0.25),
+                inset 0 -1px 1px rgba(0, 0, 0, 0.1),
+                0 10px 30px rgba(0, 0, 0, 0.15);
+            /* Squircle shape */
+            clip-path: path('M 0,12 C 0,4 4,0 12,0 L 32,0 C 40,0 44,4 44,12 L 44,32 C 44,40 40,44 32,44 L 12,44 C 4,44 0,40 0,32 Z');
+        }
+        
+        @media (min-width: 1024px) {
+            #mobile-menu-btn {
+                display: none;
+            }
+        }
+        
+        #mobile-menu-btn:hover {
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        #mobile-menu-btn:active {
+            transform: scale(0.98);
+        }
+        
+        html.dark #mobile-menu-btn {
+            background: transparent !important; /* Force transparent for glass effect */
+            border-color: rgba(255, 255, 255, 0.15);
+            color: rgba(226, 232, 240, 0.95);
+            box-shadow: 
+                inset 0 1px 1px rgba(255, 255, 255, 0.1),
+                inset 0 -1px 1px rgba(0, 0, 0, 0.25),
+                0 12px 32px rgba(0, 0, 0, 0.4);
+        }
+        
+        html.dark #mobile-menu-btn:hover {
+            background: transparent !important; /* Keep transparent on hover */
+            box-shadow: 
+                inset 0 1px 1px rgba(255, 255, 255, 0.15),
+                inset 0 -1px 1px rgba(0, 0, 0, 0.3),
+                0 14px 36px rgba(0, 0, 0, 0.5);
+        }
+        
+        html[data-theme="eye"] #mobile-menu-btn {
+            background: rgba(234, 238, 212, 0.9);
+            border-color: var(--eye-border-soft);
+            color: var(--eye-text-normal);
+            box-shadow: 0 8px 20px var(--eye-shadow);
+        }
+        
+        html[data-theme="eye"] #mobile-menu-btn:hover {
+            background: rgba(138, 122, 50, 0.15);
+        }
+        
+        /* Mobile Menu Overlay */
+        #mobile-nav-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 40;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(4px);
+        }
+        
+        #mobile-nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Mobile Navigation Panel - Liquid & Responsive */
+        #mobile-nav {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            background: transparent !important; /* Liquid glass effect */
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 1.25rem;
+            padding: 1.75rem;
+            z-index: 50;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            min-width: min(320px, 90vw);
+            max-width: min(380px, 95vw);
+            backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5);
+            -webkit-backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5);
+            box-shadow: 0 24px 48px rgba(15, 23, 42, 0.2);
+        }
+        
+        #mobile-nav.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        html.dark #mobile-nav {
+            background: transparent !important; /* Liquid glass effect */
+            border-color: rgba(148, 163, 184, 0.3);
+            color: rgba(226, 232, 240, 0.95);
+            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5);
+        }
+        
+        html[data-theme="eye"] #mobile-nav {
+            background: transparent !important; /* Liquid glass effect */
+            border-color: var(--eye-border-soft);
+            color: var(--eye-text-normal);
+            box-shadow: 0 20px 40px var(--eye-shadow);
+        }
+        
+        #mobile-nav .nav-items {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #mobile-nav .nav-item {
+            display: block;
+            width: auto;
+            height: auto;
+            background: transparent;
+            padding: 0.85rem 1.1rem;
+            border-radius: 0.75rem;
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+        }
+        
+        #mobile-nav .nav-item:hover {
+            background: rgba(71, 85, 105, 0.08);
+            width: auto;
+            height: auto;
+        }
+        
+        #mobile-nav .nav-item.is-active {
+            background: rgba(71, 85, 105, 0.12);
+            color: rgba(51, 65, 85, 0.95);
+            width: auto;
+            height: auto;
+            font-weight: 500;
+        }
+        
+        html.dark #mobile-nav .nav-item:hover {
+            background: rgba(226, 232, 240, 0.1);
+        }
+        
+        html.dark #mobile-nav .nav-item.is-active {
+            background: rgba(226, 232, 240, 0.15);
+            color: rgba(248, 250, 252, 0.95);
+        }
+        
+        html[data-theme="eye"] #mobile-nav .nav-item:hover {
+            background: rgba(138, 122, 50, 0.08);
+        }
+        
+        html[data-theme="eye"] #mobile-nav .nav-item.is-active {
+            background: rgba(138, 122, 50, 0.12);
+            color: var(--eye-accent);
+        }
+        
+        /* Hide nav-text on desktop but show on mobile */
+        .nav-text {
             display: none;
         }
+        
+        #mobile-nav .nav-text {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* Hide tooltips on mobile */
+        #mobile-nav .nav-item::after {
+            display: none;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            #mobile-nav {
+                min-width: min(300px, 85vw);
+                padding: 1.5rem;
+            }
+            
+            #mobile-menu-btn {
+                left: 0.75rem;
+                top: calc(env(safe-area-inset-top, 0px) + 0.75rem);
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            #main-nav {
+                left: 2rem;
+            }
+        }
+        
+        /* Accessibility improvements */
+        @media (prefers-reduced-motion: reduce) {
+            #main-nav,
+            .nav-item,
+            .nav-item::after,
+            #mobile-menu-btn,
+            #mobile-nav-overlay,
+            #mobile-nav {
+                transition-duration: 0.1s;
+            }
+        }
 
-        /* Scroll container for better control */
-        main {
-            scroll-snap-type: y mandatory;
+        /* Scroll container for better control - Desktop only */
+        @media (min-width: 768px) {
+            main {
+                scroll-snap-type: y proximity;
+            }
+        }
+        
+        /* ===== SVG LIQUID GLASS EFFECT (Jhey's Exact Implementation) ===== */
+        /* Apply glass effect directly to button containers */
+        
+        /* Theme toggle buttons with glass effect */
+        .theme-toggle-group {
+            backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5);
+            -webkit-backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5);
+            background: transparent !important; /* Pure glass, no tint */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 0.4rem;
+            box-shadow: 
+                inset 0 0 2px 1px rgba(255, 255, 255, 0.25),
+                0 8px 24px rgba(0, 0, 0, 0.15),
+                0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Mobile menu button with glass effect */
+        #mobile-menu-btn {
+            backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5) !important;
+            -webkit-backdrop-filter: url(#liquid-glass-filter) brightness(1.1) saturate(1.5) !important;
+            background: transparent !important; /* Pure glass, no tint */
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            box-shadow: 
+                inset 0 0 2px 1px rgba(255, 255, 255, 0.25),
+                0 10px 28px rgba(0, 0, 0, 0.15) !important;
+        }
+        
+        /* Dark mode adjustments for glass */
+        html.dark .theme-toggle-group,
+        html.dark #mobile-menu-btn {
+            border-color: rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 
+                inset 0 0 2px 1px rgba(255, 255, 255, 0.15),
+                0 12px 32px rgba(0, 0, 0, 0.4) !important;
+        }
+        
+        /* Fallback frosted glass for non-Chromium browsers */
+        @supports not (backdrop-filter: url(#liquid-glass-filter)) {
+            .theme-toggle-group,
+            #mobile-menu-btn {
+                backdrop-filter: blur(12px) brightness(1.1) saturate(1.5) !important;
+                -webkit-backdrop-filter: blur(12px) brightness(1.1) saturate(1.5) !important;
+            }
+        }
+        
+        /* Hide SVG filter definition */
+        #liquid-glass-svg {
+            position: fixed;
+            width: 0;
+            height: 0;
+            pointer-events: none;
         }
     </style>
 </head>
 
 <body class="font-sans antialiased">
+    <!-- SVG Filter Definition for LIQUID Glass Effect (Jhey's Exact Method) -->
+    <svg id="liquid-glass-svg" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <!-- Squircle clip path for theme toggle group (approx 100x50px) -->
+            <clipPath id="squircle-theme-toggle" clipPathUnits="objectBoundingBox">
+                <path d="M 0,0.28 C 0,0.1 0.1,0 0.28,0 L 0.72,0 C 0.9,0 1,0.1 1,0.28 L 1,0.72 C 1,0.9 0.9,1 0.72,1 L 0.28,1 C 0.1,1 0,0.9 0,0.72 Z" />
+            </clipPath>
+            
+            <filter id="liquid-glass-filter" x="-100%" y="-100%" width="300%" height="300%" color-interpolation-filters="sRGB">
+                <!-- Input blur (displace parameter) - set to 0 for sharp distortion -->
+                <feGaussianBlur in="SourceGraphic" stdDeviation="0" result="blur"/>
+                
+                <!-- Displacement map from blurred source -->
+                <feColorMatrix in="blur" type="matrix" 
+                    values="1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 0 18 -7" result="map"/>
+                
+                <!-- Chromatic aberration - RED channel (strongest displacement) -->
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="-180" 
+                    xChannelSelector="R" yChannelSelector="G" result="dispRed"/>
+                <feColorMatrix in="dispRed" type="matrix" 
+                    values="1 0 0 0 0
+                            0 0 0 0 0
+                            0 0 0 0 0
+                            0 0 0 1 0" result="red"/>
+                
+                <!-- Chromatic aberration - GREEN channel (reference, least displaced) -->
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="-170" 
+                    xChannelSelector="R" yChannelSelector="G" result="dispGreen"/>
+                <feColorMatrix in="dispGreen" type="matrix" 
+                    values="0 0 0 0 0
+                            0 1 0 0 0
+                            0 0 0 0 0
+                            0 0 0 1 0" result="green"/>
+                
+                <!-- Chromatic aberration - BLUE channel (medium displacement) -->
+                <feDisplacementMap in="SourceGraphic" in2="map" scale="-160" 
+                    xChannelSelector="R" yChannelSelector="G" result="dispBlue"/>
+                <feColorMatrix in="dispBlue" type="matrix" 
+                    values="0 0 0 0 0
+                            0 0 0 0 0
+                            0 0 1 0 0
+                            0 0 0 1 0" result="blue"/>
+                
+                <!-- Blend channels back together -->
+                <feBlend in="red" in2="green" mode="screen" result="rg"/>
+                <feBlend in="rg" in2="blue" mode="screen" result="output"/>
+                
+                <!-- Turbulence for liquid effect -->
+                <feTurbulence type="fractalNoise" baseFrequency="0.005 0.01" 
+                    numOctaves="2" result="turbulence"/>
+                <feDisplacementMap in="output" in2="turbulence" scale="20" 
+                    xChannelSelector="R" yChannelSelector="G" result="liquid"/>
+                
+                <!-- Final blur for smoothness -->
+                <feGaussianBlur in="liquid" stdDeviation="0.7"/>
+            </filter>
+        </defs>
+    </svg>
     <div
         class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm group-hover:border-muted-foreground/40 transition-colors duration-500 font-mono border-0">
         <!-- Skip Navigation Link for Accessibility -->
         <a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
         
-        <!-- Mobile Menu Toggle -->
-        <button id="mobile-menu-toggle"
-            class="fixed top-4 left-4 z-20 lg:hidden p-2 rounded-lg bg-background/80 backdrop-blur-sm border border-border/50">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                </path>
-            </svg>
-        </button>
-        
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" 
-            class="fixed top-4 right-4 z-20 lg:block p-2 rounded-lg bg-background/80 backdrop-blur-sm border border-border/50"
-            aria-label="Toggle dark/light mode" 
-            title="Toggle dark/light mode">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-            </svg>
+        <div class="top-controls">
+            <!-- Theme Toggle Buttons - keep in normal flow -->
+            <div class="theme-toggle-group" role="group" aria-label="Theme controls">
+                <!-- Eye Protection Toggle -->
+                <button id="eyeProtectionBtn"
+                    class="text-lg font-medium"
+                    aria-label="Toggle eye protection"
+                    title="Eye protection mode">
+                    ͼ
+                </button>
+                <!-- Light/Dark Toggle -->
+                <button id="themeBtn"
+                    class="text-lg font-medium"
+                    aria-label="Toggle light/dark"
+                    title="Toggle light/dark">
+                    ☀︎
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" aria-label="Menu">
+            𝛯
         </button>
 
         <!-- Mobile Navigation Overlay -->
-        <div id="mobile-nav-overlay" class="fixed inset-0 bg-black/50 z-15 lg:hidden hidden"></div>
+        <div id="mobile-nav-overlay"></div>
 
-        <!-- Main Content Container with ID for skip navigation -->
-        <main id="main-content" class="max-w-4xl mx-auto px-8 lg:px-16">
-            <div class="flex flex-col gap-4">
-                <button onclick="scrollToSection('intro')"
-                    class="w-2 h-8 rounded-full transition-all duration-500 bg-foreground"
-                    aria-label="Navigate to intro" data-label="intro"></button>
-                <button onclick="scrollToSection('education')"
-                    class="w-2 h-8 rounded-full transition-all duration-500 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                    aria-label="Navigate to education" data-label="education"></button>
-                <button onclick="scrollToSection('experience')"
-                    class="w-2 h-8 rounded-full transition-all duration-500 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                    aria-label="Navigate to experience" data-label="experience"></button>
-                <button onclick="scrollToSection('projects')"
-                    class="w-2 h-8 rounded-full transition-all duration-500 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                    aria-label="Navigate to projects" data-label="projects"></button>
-                <button onclick="scrollToSection('skills')"
-                    class="w-2 h-8 rounded-full transition-all duration-500 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                    aria-label="Navigate to skills" data-label="skills"></button>
-                <button onclick="scrollToSection('achievements')"
-                    class="w-2 h-8 rounded-full transition-all duration-500 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                    aria-label="Navigate to achievements" data-label="achievements"></button>
-                <button onclick="scrollToSection('blog')"
-                    class="w-2 h-8 rounded-full transition-all duration-500 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                    aria-label="Navigate to blog" data-label="blog"></button>
-                <button onclick="scrollToSection('connect')"
-                    class="w-2 h-8 rounded-full transition-all duration-500 bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                    aria-label="Navigate to connect" data-label="connect"></button>
-            </div>
+        <!-- Mobile Navigation Panel -->
+        <nav id="mobile-nav" aria-label="Navigation">
+            <ul class="nav-items">
+                <li><a href="#intro" class="nav-item is-active" data-section="intro"><span class="nav-text">Intro</span></a></li>
+                <li><a href="#education" class="nav-item" data-section="education"><span class="nav-text">Education</span></a></li>
+                <li><a href="#experience" class="nav-item" data-section="experience"><span class="nav-text">Experience</span></a></li>
+                <li><a href="#projects" class="nav-item" data-section="projects"><span class="nav-text">Projects</span></a></li>
+                <li><a href="#skills" class="nav-item" data-section="skills"><span class="nav-text">Skills</span></a></li>
+                <li><a href="#achievements" class="nav-item" data-section="achievements"><span class="nav-text">Achievements</span></a></li>
+                <li><a href="#blog" class="nav-item" data-section="blog"><span class="nav-text">Blog</span></a></li>
+                <li><a href="#connect" class="nav-item" data-section="connect"><span class="nav-text">Connect</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Desktop Navigation -->
+        <nav id="main-nav" aria-label="Primary navigation">
+            <ul class="nav-items">
+                <li><a href="#intro" class="nav-item is-active" data-section="intro" data-label="Intro"><span class="nav-text">Intro</span></a></li>
+                <li><a href="#education" class="nav-item" data-section="education" data-label="Education"><span class="nav-text">Education</span></a></li>
+                <li><a href="#experience" class="nav-item" data-section="experience" data-label="Experience"><span class="nav-text">Experience</span></a></li>
+                <li><a href="#projects" class="nav-item" data-section="projects" data-label="Projects"><span class="nav-text">Projects</span></a></li>
+                <li><a href="#skills" class="nav-item" data-section="skills" data-label="Skills"><span class="nav-text">Skills</span></a></li>
+                <li><a href="#achievements" class="nav-item" data-section="achievements" data-label="Achievements"><span class="nav-text">Achievements</span></a></li>
+                <li><a href="#blog" class="nav-item" data-section="blog" data-label="Blog"><span class="nav-text">Blog</span></a></li>
+                <li><a href="#connect" class="nav-item" data-section="connect" data-label="Connect"><span class="nav-text">Connect</span></a></li>
+            </ul>
         </nav>
         <main id="main-content" class="max-w-4xl mx-auto px-8 lg:px-16">
             <header id="intro" class="min-h-screen flex items-center opacity-0 animate-fade-in-up">
@@ -657,7 +1509,7 @@
                             <div
                                 class="relative w-full h-48 transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
                                 <div
-                                    class="pokemon-card absolute inset-0 bg-background border border-border hover:border-blue-500/30 shadow-lg flex flex-col justify-center items-center p-4 backface-hidden rounded-lg transition-all duration-300 overflow-hidden">
+                                    class="pokemon-card absolute inset-0 bg-background border border-border hover:border-slate-400/30 shadow-lg flex flex-col justify-center items-center p-4 backface-hidden rounded-lg transition-all duration-300 overflow-hidden">
                                     <div
                                         class="card-shine absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     </div>
@@ -798,11 +1650,11 @@
                             <div
                                 class="relative w-full h-48 transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
                                 <div
-                                    class="pokemon-card absolute inset-0 bg-background border border-border hover:border-blue-600/30 shadow-lg flex flex-col justify-center items-center p-4 backface-hidden rounded-lg transition-all duration-300 overflow-hidden">
+                                    class="pokemon-card absolute inset-0 bg-background border border-border hover:border-slate-400/30 shadow-lg flex flex-col justify-center items-center p-4 backface-hidden rounded-lg transition-all duration-300 overflow-hidden">
                                     <div
                                         class="card-shine absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     </div>
-                                    <div class="w-8 h-0.5 bg-blue-600/60 rounded-full mb-3 relative z-10"></div>
+                                    <div class="w-8 h-0.5 bg-slate-600/60 rounded-full mb-3 relative z-10"></div>
                                     <h3 class="text-xl font-light text-foreground relative z-10">Azwing</h3>
                                     <p class="text-sm text-muted-foreground mt-1 relative z-10">Microsoft Azure</p>
                                     <span class="text-xs text-muted-foreground/60 mt-2 relative z-10 font-mono">Flying
@@ -854,11 +1706,11 @@
                             <div
                                 class="relative w-full h-48 transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
                                 <div
-                                    class="pokemon-card absolute inset-0 bg-background border border-border hover:border-blue-400/30 shadow-lg flex flex-col justify-center items-center p-4 backface-hidden rounded-lg transition-all duration-300 overflow-hidden">
+                                    class="pokemon-card absolute inset-0 bg-background border border-border hover:border-slate-400/30 shadow-lg flex flex-col justify-center items-center p-4 backface-hidden rounded-lg transition-all duration-300 overflow-hidden">
                                     <div
                                         class="card-shine absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     </div>
-                                    <div class="w-8 h-0.5 rounded-full mb-3 relative z-10 bg-sky-500"></div>
+                                    <div class="w-8 h-0.5 rounded-full mb-3 relative z-10 bg-slate-500"></div>
                                     <h3 class="text-xl font-light text-foreground relative z-10">SQLtle</h3>
                                     <p class="text-sm text-muted-foreground mt-1 relative z-10">MySQL</p>
                                     <span class="text-xs text-muted-foreground/60 mt-2 relative z-10 font-mono">Water
@@ -1264,12 +2116,21 @@
         function scrollToSection(sectionId) {
             const element = document.getElementById(sectionId);
             if (element) {
-                // Only use smooth scrolling on desktop, instant on mobile
-                const behavior = window.innerWidth >= 768 ? 'smooth' : 'instant';
+                // Detect mobile more reliably
+                const isMobile = window.innerWidth < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                
+                // Use smooth scrolling on desktop, auto on mobile for better performance
+                const behavior = isMobile ? 'auto' : 'smooth';
                 element.scrollIntoView({
                     behavior: behavior,
-                    block: 'start'
+                    block: 'start',
+                    inline: 'nearest'
                 });
+                
+                // Close mobile menu if open
+                if (isMobile && window.MobileNav) {
+                    window.MobileNav.close();
+                }
             }
         }
 
@@ -1279,207 +2140,266 @@
             document.getElementById('current-year').textContent = currentYear;
             document.getElementById('footer-year').textContent = currentYear;
 
-            // Initialize sections for fade animations
-            const sections = document.querySelectorAll('section, header');
-            sections.forEach(section => {
+            const allSections = Array.from(document.querySelectorAll('section, header'));
+            const sectionIds = ['intro', 'education', 'experience', 'projects', 'skills', 'achievements', 'blog', 'connect'];
+            const navItems = Array.from(document.querySelectorAll('#main-nav [data-nav-item]'));
+
+            const setActiveNavItem = (target) => {
+                const index = typeof target === 'number' ? target : sectionIds.indexOf(target);
+                if (index < 0 || index >= navItems.length) {
+                    return;
+                }
+
+                navItems.forEach((item, idx) => {
+                    const isActive = idx === index;
+                    item.classList.toggle('is-active', isActive);
+                    if (isActive) {
+                        item.setAttribute('aria-current', 'true');
+                    } else {
+                        item.removeAttribute('aria-current');
+                    }
+                });
+            };
+
+            navItems.forEach(item => {
+                const behavior = item.dataset.behavior;
+                const sectionId = item.dataset.section;
+
+                if (behavior === 'scroll' && sectionId) {
+                    item.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        scrollToSection(sectionId);
+                        setActiveNavItem(sectionId);
+                    });
+                }
+            });
+
+            allSections.forEach(section => {
                 section.classList.remove('opacity-0');
-                // All sections start dimmed except hero
                 if (section.id === 'intro') {
-                    // Hero section starts active and bright
                     section.classList.add('section-active');
                 } else {
-                    // Other sections start dimmed
                     section.classList.add('section-leaving');
                 }
             });
 
-            // For mobile devices, we'll disable scroll hijacking 
-            // and only use the Intersection Observer for desktop
-            if (window.innerWidth < 768) {
-                // On mobile, just initialize basic section states without scroll hijacking
+            setActiveNavItem(0);
+
+            const isMobile = window.innerWidth < 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+            if (isMobile) {
+                const mobileObserverOptions = {
+                    threshold: [0.3, 0.7],
+                    rootMargin: '0px 0px -10% 0px'
+                };
+
+                const mobileObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        const section = entry.target;
+                        const sectionIndex = sectionIds.indexOf(section.id);
+
+                        section.classList.remove('section-active', 'section-entering', 'section-leaving');
+
+                        if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                            section.classList.add('section-active');
+                            if (sectionIndex !== -1) {
+                                setActiveNavItem(sectionIndex);
+                            }
+                        } else if (entry.isIntersecting) {
+                            section.classList.add('section-entering');
+                        } else {
+                            section.classList.add('section-leaving');
+                        }
+                    });
+                }, mobileObserverOptions);
+
+                allSections.forEach(section => mobileObserver.observe(section));
+
+                let mobileScrollTimeout;
+                window.addEventListener('scroll', () => {
+                    clearTimeout(mobileScrollTimeout);
+                    mobileScrollTimeout = setTimeout(() => {
+                        const scrollPosition = window.scrollY + window.innerHeight / 2;
+                        let activeIndex = 0;
+
+                        allSections.forEach(section => {
+                            const rect = section.getBoundingClientRect();
+                            const sectionTop = rect.top + window.scrollY;
+                            const sectionBottom = sectionTop + rect.height;
+
+                            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                                const navIndex = sectionIds.indexOf(section.id);
+                                if (navIndex !== -1) {
+                                    activeIndex = navIndex;
+                                }
+                            }
+                        });
+
+                        setActiveNavItem(activeIndex);
+                    }, 80);
+                }, { passive: true });
+
                 return;
             }
 
-            // Smooth fade animations based on scroll position (desktop only)
             const observerOptions = {
                 threshold: [0, 0.2, 0.5, 0.8, 1],
                 rootMargin: '0px 0px -20% 0px'
             };
 
-            const navButtons = document.querySelectorAll('nav button[onclick*="scrollToSection"]');
-            const sectionIds = ['intro', 'education', 'experience', 'projects', 'skills', 'achievements', 'blog', 'connect'];
-            const allSections = document.querySelectorAll('section, header');
-
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     const section = entry.target;
-                    const sectionId = section.id;
-                    const sectionIndex = sectionIds.indexOf(sectionId);
+                    const sectionIndex = sectionIds.indexOf(section.id);
 
-                    // Remove all animation classes
                     section.classList.remove('section-active', 'section-entering', 'section-leaving');
 
                     if (entry.isIntersecting) {
                         if (entry.intersectionRatio > 0.6) {
-                            // Section is prominently in view - make it bright
                             section.classList.add('section-active');
-
-                            // Update navigation
-                            if (sectionIndex !== -1 && navButtons[sectionIndex]) {
-                                navButtons.forEach(btn => {
-                                    btn.classList.remove('bg-foreground');
-                                    btn.classList.add('bg-muted-foreground/30');
-                                });
-                                navButtons[sectionIndex].classList.remove('bg-muted-foreground/30');
-                                navButtons[sectionIndex].classList.add('bg-foreground');
+                            if (sectionIndex !== -1) {
+                                setActiveNavItem(sectionIndex);
                             }
                         } else if (entry.intersectionRatio > 0.2) {
-                            // Section is partially in view - medium brightness
                             section.classList.add('section-entering');
                         }
                     } else {
-                        // Section is out of view - dim it
                         section.classList.add('section-leaving');
                     }
                 });
             }, observerOptions);
 
-            // Observe all sections
-            allSections.forEach(section => {
-                observer.observe(section);
-            });
+            allSections.forEach(section => observer.observe(section));
 
-            // Dynamic navigation update based on scroll position (desktop only)
-            function updateActiveNavigation() {
+            const updateActiveNavigation = () => {
                 const scrollPosition = window.scrollY + window.innerHeight / 3;
                 let activeIndex = 0;
 
-                // Find which section is currently most prominent
-                allSections.forEach((section, index) => {
+                allSections.forEach(section => {
                     const rect = section.getBoundingClientRect();
                     const sectionTop = rect.top + window.scrollY;
                     const sectionBottom = sectionTop + rect.height;
 
                     if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                        activeIndex = index;
+                        const navIndex = sectionIds.indexOf(section.id);
+                        if (navIndex !== -1) {
+                            activeIndex = navIndex;
+                        }
                     }
                 });
 
-                // Update navigation buttons
-                navButtons.forEach((btn, index) => {
-                    if (index === activeIndex) {
-                        btn.classList.remove('bg-muted-foreground/30');
-                        btn.classList.add('bg-foreground');
-                    } else {
-                        btn.classList.remove('bg-foreground');
-                        btn.classList.add('bg-muted-foreground/30');
-                    }
-                });
-            }
+                setActiveNavItem(activeIndex);
+            };
 
-            // Update navigation on scroll (desktop only)
             let scrollTimeout;
             window.addEventListener('scroll', () => {
                 updateActiveNavigation();
 
-                // Also update on scroll end for accuracy
                 clearTimeout(scrollTimeout);
                 scrollTimeout = setTimeout(updateActiveNavigation, 50);
             }, { passive: true });
 
-            // Initial navigation update (desktop only)
             updateActiveNavigation();
         });
 
-        // Mobile navigation functionality
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
-        const mainNav = document.getElementById('main-nav');
-        let isOpen = false;
+        (function () {
+            const THEME_STORAGE_KEY = 'theme';
+            const BASE_THEME_STORAGE_KEY = 'baseTheme';
+            const htmlElement = document.documentElement;
+            const themeToggle = document.getElementById('themeBtn');
+            const eyeProtectionBtn = document.getElementById('eyeProtectionBtn');
+            const themeMeta = document.querySelector('meta[name="theme-color"]');
+            const prefersDarkMedia = window.matchMedia('(prefers-color-scheme: dark)');
 
-        function toggleMobileNav() {
-            isOpen = !isOpen;
-            if (isOpen) {
-                mainNav.classList.add('mobile-open');
-                mobileNavOverlay.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            } else {
-                mainNav.classList.remove('mobile-open');
-                mobileNavOverlay.classList.add('hidden');
-                document.body.style.overflow = '';
-            }
-        }
+            const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+            const storedBaseTheme = localStorage.getItem(BASE_THEME_STORAGE_KEY);
+            const systemPrefersDark = prefersDarkMedia.matches;
 
-        if (mobileMenuToggle) {
-            mobileMenuToggle.addEventListener('click', toggleMobileNav);
-        }
+            let baseTheme = storedBaseTheme === 'light' || storedBaseTheme === 'dark'
+                ? storedBaseTheme
+                : (systemPrefersDark ? 'dark' : 'light');
 
-        if (mobileNavOverlay) {
-            mobileNavOverlay.addEventListener('click', toggleMobileNav);
-        }
+            let activeTheme = storedTheme === 'eye'
+                ? 'eye'
+                : (storedTheme === 'light' || storedTheme === 'dark' ? storedTheme : baseTheme);
 
-        // Close mobile nav on navigation
-        if (mainNav) {
-            mainNav.addEventListener('click', (e) => {
-                if (e.target.tagName === 'BUTTON' && isOpen) {
-                    setTimeout(() => {
-                        toggleMobileNav();
-                    }, 100);
+            const updateButtons = () => {
+                if (themeToggle) {
+                    const isDarkMode = activeTheme === 'dark';
+                    themeToggle.textContent = isDarkMode ? '☀︎' : '☽';
+                    themeToggle.setAttribute('aria-pressed', String(isDarkMode));
+                }
+
+                if (eyeProtectionBtn) {
+                    const isEyeMode = activeTheme === 'eye';
+                    eyeProtectionBtn.textContent = isEyeMode ? '👁' : 'ͼ';
+                    eyeProtectionBtn.classList.toggle('is-active', isEyeMode);
+                    eyeProtectionBtn.setAttribute('aria-pressed', String(isEyeMode));
+                }
+            };
+
+            const syncMetaTheme = (theme) => {
+                if (!themeMeta) return;
+                const color = theme === 'dark' ? '#0a0a0a' : (theme === 'eye' ? '#F7F3E9' : '#ffffff');
+                themeMeta.setAttribute('content', color);
+            };
+
+            const notifyCommentsTheme = (theme) => {
+                if (window.CommentsApp && typeof window.CommentsApp.updateTheme === 'function') {
+                    window.CommentsApp.updateTheme(theme === 'dark' ? 'dark_high_contrast' : 'light');
+                }
+            };
+
+            const applyTheme = (theme, { persist = true } = {}) => {
+                activeTheme = theme;
+
+                if (theme === 'dark') {
+                    htmlElement.dataset.theme = 'dark';
+                    htmlElement.classList.add('dark');
+                } else {
+                    htmlElement.dataset.theme = theme;
+                    htmlElement.classList.remove('dark');
+                }
+
+                if (persist) {
+                    localStorage.setItem(THEME_STORAGE_KEY, theme);
+                    localStorage.setItem(BASE_THEME_STORAGE_KEY, baseTheme);
+                }
+
+                syncMetaTheme(theme);
+                notifyCommentsTheme(theme);
+                updateButtons();
+            };
+
+            applyTheme(activeTheme, { persist: false });
+
+            themeToggle?.addEventListener('click', () => {
+                const nextTheme = activeTheme === 'dark' ? 'light' : 'dark';
+                baseTheme = nextTheme;
+                applyTheme(nextTheme);
+            });
+
+            eyeProtectionBtn?.addEventListener('click', () => {
+                if (activeTheme === 'eye') {
+                    applyTheme(baseTheme);
+                } else {
+                    applyTheme('eye');
                 }
             });
-        }
 
-        // Close on window resize to desktop
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 1024 && isOpen) {
-                toggleMobileNav();
-            }
-        });
-        
-        // Theme Toggle Functionality
-        const themeToggle = document.getElementById('theme-toggle');
-        
-        // Check for saved theme preference or respect system preference
-        const getPreferredTheme = () => {
-            const storedTheme = localStorage.getItem('theme');
-            if (storedTheme) {
-                return storedTheme;
-            }
-            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        };
-        
-        // Set the initial theme
-        const setTheme = (theme) => {
-            if (theme === 'dark') {
-                document.documentElement.classList.add('dark');
-                // Update theme-color meta tag for mobile browsers
-                document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0a0a0a');
-            } else {
-                document.documentElement.classList.remove('dark');
-                document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff');
-            }
-            localStorage.setItem('theme', theme);
-        };
-        
-        // Initialize theme
-        document.addEventListener('DOMContentLoaded', () => {
-            const currentTheme = getPreferredTheme();
-            setTheme(currentTheme);
-            
-            if (themeToggle) {
-                themeToggle.addEventListener('click', () => {
-                    const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-                    setTheme(newTheme);
-                });
-            }
-        });
-        
-        // Listen for system theme changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            if (!localStorage.getItem('theme')) {
-                setTheme(e.matches ? 'dark' : 'light');
-            }
-        });
+            prefersDarkMedia.addEventListener('change', (event) => {
+                const stored = localStorage.getItem(THEME_STORAGE_KEY);
+                baseTheme = event.matches ? 'dark' : 'light';
+
+                if (!stored || stored === 'light' || stored === 'dark') {
+                    if (activeTheme !== 'eye') {
+                        applyTheme(baseTheme);
+                    } else {
+                        localStorage.setItem(BASE_THEME_STORAGE_KEY, baseTheme);
+                    }
+                }
+            });
+        })();
     </script>
     
     <!-- Meta tag for theme-color (if not already present) -->
@@ -1487,7 +2407,7 @@
 
     <!-- Blog Integration Scripts -->
     <script src="blog/js/performance.js"></script>
-    <script src="blog/js/mobile-nav.js"></script>
+    <script src="js/navigation.js"></script>
     <next-route-announcer style="position: absolute;">
         <template shadowrootmode="open">
             <div aria-live="assertive" id="__next-route-announcer__" role="alert"
@@ -1495,6 +2415,14 @@
             </div>
         </template>
     </next-route-announcer>
+    
+    <!-- SVG-based Liquid Glass Effect (no libraries needed!) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("✨ Initializing SVG Liquid Glass effect...");
+            // The glass effect is purely CSS/SVG - no JavaScript initialization needed!
+        });
+    </script>
 </body>
 
 </html>
