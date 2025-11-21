@@ -29,6 +29,16 @@
     <meta name="description"
         content="Electronics &amp; Communications Engineering student, passionate about Deep Learning, Robotics &amp; Full-Stack Development. Tinkering fulltime.">
     <meta name="theme-color" content="#0a0a0a">
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Prajyoth Reddy - Electronics & Communications Engineering Student">
+    <meta property="og:description" content="Electronics & Communications Engineering student, passionate about Deep Learning, Robotics & Full-Stack Development. Tinkering fulltime.">
+    <meta property="og:url" content="https://prajyoth.pages.dev/">
+    <meta property="og:image" content="https://prajyoth.pages.dev/prajyothprofilepic.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prajyoth Reddy - Electronics & Communications Engineering Student">
+    <meta name="twitter:description" content="Electronics & Communications Engineering student, passionate about Deep Learning, Robotics & Full-Stack Development. Tinkering fulltime.">
+    <meta name="twitter:image" content="https://prajyoth.pages.dev/prajyothprofilepic.png">
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
@@ -1710,7 +1720,7 @@
                                     <div
                                         class="card-shine absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     </div>
-                                    <div class="w-8 h-0.5 rounded-full mb-3 relative z-10 bg-slate-500"></div>
+                                    <div class="w-8 h-0.5 bg-slate-500 rounded-full mb-3 relative z-10"></div>
                                     <h3 class="text-xl font-light text-foreground relative z-10">SQLtle</h3>
                                     <p class="text-sm text-muted-foreground mt-1 relative z-10">MySQL</p>
                                     <span class="text-xs text-muted-foreground/60 mt-2 relative z-10 font-mono">Water
@@ -1910,58 +1920,129 @@
                         <div class="text-sm text-muted-foreground font-mono">BLOG</div>
                     </div>
                     <div class="space-y-12">
-                        <article
-                            class="group grid lg:grid-cols-12 gap-8 py-8 border-b border-border/50 hover:border-border transition-colors duration-500 cursor-pointer"
-                            onclick="window.location.href='article.html?id=2025-01-29-building-with-javascript'">
-                            <div class="lg:col-span-3">
-                                <div class="space-y-1">
-                                    <div class="text-sm text-muted-foreground font-sans">January 29, 2025</div>
-                                    <div class="text-xs text-muted-foreground font-mono">8 min read</div>
-                                </div>
+                        <div id="latest-articles-container">
+                            <!-- Articles will be dynamically loaded here -->
+                            <div class="animate-pulse space-y-8">
+                                <div class="h-32 bg-muted-foreground/10 rounded-lg"></div>
+                                <div class="h-32 bg-muted-foreground/10 rounded-lg"></div>
                             </div>
-                            <div class="lg:col-span-6 space-y-3">
-                                <h3
-                                    class="text-2xl font-light text-foreground group-hover:text-muted-foreground transition-colors duration-500 font-sans">
-                                    Building Modern Web Apps with Vanilla JavaScript</h3>
-                                <p class="text-muted-foreground leading-relaxed font-sans">Exploring how to build
-                                    powerful web applications without heavy frameworks, focusing on performance and
-                                    simplicity.</p>
-                            </div>
-                            <div class="lg:col-span-3 flex flex-wrap gap-2 lg:justify-end">
-                                <span
-                                    class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm group-hover:border-muted-foreground/40 transition-colors duration-500 font-mono border-0">javascript</span>
-                                <span
-                                    class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm group-hover:border-muted-foreground/40 transition-colors duration-500 font-mono border-0">web-development</span>
-                                <span
-                                    class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm group-hover:border-muted-foreground/40 transition-colors duration-500 font-mono border-0">performance</span>
-                            </div>
-                        </article>
-                        <article
-                            class="group grid lg:grid-cols-12 gap-8 py-8 border-b border-border/50 hover:border-border transition-colors duration-500 cursor-pointer"
-                            onclick="window.location.href='article.html?id=2025-01-28-welcome-to-my-blog'">
-                            <div class="lg:col-span-3">
-                                <div class="space-y-1">
-                                    <div class="text-sm text-muted-foreground font-sans">January 28, 2025</div>
-                                    <div class="text-xs text-muted-foreground font-mono">3 min read</div>
-                                </div>
-                            </div>
-                            <div class="lg:col-span-6 space-y-3">
-                                <h3
-                                    class="text-2xl font-light text-foreground group-hover:text-muted-foreground transition-colors duration-500 font-sans">
-                                    Welcome to My Blog</h3>
-                                <p class="text-muted-foreground leading-relaxed font-sans">My first blog post where I
-                                    share my thoughts on technology, AI, building cool stuff and philosophy.</p>
-                            </div>
-                            <div class="lg:col-span-3 flex flex-wrap gap-2 lg:justify-end">
-                                <span
-                                    class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm group-hover:border-muted-foreground/40 transition-colors duration-500 font-mono border-0">introduction</span>
-                                <span
-                                    class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm group-hover:border-muted-foreground/40 transition-colors duration-500 font-mono border-0">personal</span>
-                                <span
-                                    class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm group-hover:border-muted-foreground/40 transition-colors duration-500 font-mono border-0">technology</span>
-                            </div>
-                        </article>
+                            <noscript>
+                                <!-- Fallback for non-JS clients and simple SEO crawlability: two latest posts -->
+                                <article
+                                    class="group grid lg:grid-cols-12 gap-8 py-8 border-b border-border/50 hover:border-border transition-colors duration-500 cursor-pointer"
+                                    onclick="window.location.href='article.html?id=2025-01-29-building-with-javascript'">
+                                    <div class="lg:col-span-3">
+                                        <div class="space-y-1">
+                                            <div class="text-sm text-muted-foreground font-sans">January 29, 2025</div>
+                                            <div class="text-xs text-muted-foreground font-mono">8 min read</div>
+                                        </div>
+                                    </div>
+                                    <div class="lg:col-span-6 space-y-3">
+                                        <h3
+                                            class="text-2xl font-light text-foreground group-hover:text-muted-foreground transition-colors duration-500 font-sans">
+                                            Building Modern Web Apps with Vanilla JavaScript</h3>
+                                        <p class="text-muted-foreground leading-relaxed font-sans">Exploring how to build
+                                            powerful web applications without heavy frameworks, focusing on performance and
+                                            simplicity.</p>
+                                    </div>
+                                    <div class="lg:col-span-3 flex flex-wrap gap-2 lg:justify-end">
+                                        <span
+                                            class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm group-hover:border-muted-foreground/40 transition-colors duration-500 font-mono border-0">javascript</span>
+                                        <span
+                                            class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm group-hover:border-muted-foreground/40 transition-colors duration-500 font-mono border-0">web-development</span>
+                                        <span
+                                            class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm group-hover:border-muted-foreground/40 transition-colors duration-500 font-mono border-0">performance</span>
+                                    </div>
+                                </article>
+                                <article
+                                    class="group grid lg:grid-cols-12 gap-8 py-8 border-b border-border/50 hover:border-border transition-colors duration-500 cursor-pointer"
+                                    onclick="window.location.href='article.html?id=2025-01-28-welcome-to-my-blog'">
+                                    <div class="lg:col-span-3">
+                                        <div class="space-y-1">
+                                            <div class="text-sm text-muted-foreground font-sans">January 28, 2025</div>
+                                            <div class="text-xs text-muted-foreground font-mono">3 min read</div>
+                                        </div>
+                                    </div>
+                                    <div class="lg:col-span-6 space-y-3">
+                                        <h3
+                                            class="text-2xl font-light text-foreground group-hover:text-muted-foreground transition-colors duration-500 font-sans">
+                                            Welcome to My Blog</h3>
+                                        <p class="text-muted-foreground leading-relaxed font-sans">My first blog post where I
+                                            share my thoughts on technology, AI, building cool stuff and philosophy.</p>
+                                    </div>
+                                    <div class="lg:col-span-3 flex flex-wrap gap-2 lg:justify-end">
+                                        <span
+                                            class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm group-hover:border-muted-foreground/40 transition-colors duration-500 font-mono border-0">introduction</span>
+                                        <span
+                                            class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm group-hover:border-muted-foreground/40 transition-colors duration-500 font-mono border-0">personal</span>
+                                        <span
+                                            class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm group-hover:border-muted-foreground/40 transition-colors duration-500 font-mono border-0">technology</span>
+                                    </div>
+                                </article>
+                            </noscript>
+                        </div>
                     </div>
+                    <script>
+                        // Populate latest 2 posts and inject JSON-LD for SEO
+                        (function() {
+                            async function loadLatest() {
+                                try {
+                                    const resp = await fetch('blog/data/articles.json', {cache: 'no-cache'});
+                                    const data = await resp.json();
+                                    const articles = Array.isArray(data.articles) ? data.articles.slice().sort((a,b) => new Date(b.date) - new Date(a.date)) : [];
+                                    const latest = articles.slice(0,2);
+
+                                    const container = document.getElementById('latest-articles-container');
+                                    if (!container) return;
+
+                                    const html = latest.map(article => {
+                                        const urlSafe = article.id || article.slug || '';
+                                        const articleUrl = `article.html?id=${urlSafe}`;
+                                        const tagsHtml = (article.tags || []).map(t => `\n                                            <span class="px-1.5 py-0.5 text-xs text-muted-foreground/80 border-border/60 rounded-sm transition-colors duration-500 font-mono border-0">${t}</span>`).join('');
+
+                                        return `\n                                <article class="group grid lg:grid-cols-12 gap-8 py-8 border-b border-border/50 hover:border-border transition-colors duration-500 cursor-pointer" onclick="window.location.href='${articleUrl}'">\n                                    <div class="lg:col-span-3">\n                                        <div class="space-y-1">\n                                            <div class="text-sm text-muted-foreground font-sans">${new Date(article.date).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>\n                                            <div class="text-xs text-muted-foreground font-mono">${article.readTime} min read</div>\n                                        </div>\n                                    </div>\n                                    <div class="lg:col-span-6 space-y-3">\n                                        <h3 class="text-2xl font-light text-foreground group-hover:text-muted-foreground transition-colors duration-500 font-sans">${article.title}</h3>\n                                        <p class="text-muted-foreground leading-relaxed font-sans">${article.excerpt || article.description || ''}</p>\n                                    </div>\n                                    <div class="lg:col-span-3 flex flex-wrap gap-2 lg:justify-end">\n                                        ${tagsHtml}\n                                    </div>\n                                </article>`;
+                                    }).join('');
+
+                                    container.innerHTML = html || '<p class="text-sm text-muted-foreground italic">No posts available yet.</p>';
+
+                                    // Build JSON-LD
+                                    const ld = {
+                                        "@context": "https://schema.org",
+                                        "@type": "Blog",
+                                        "name": "Prajyoth Reddy",
+                                        "url": "https://prajyoth.pages.dev/",
+                                        "blogPost": latest.map(a => ({
+                                            "@type": "BlogPosting",
+                                            "headline": a.title,
+                                            "description": a.excerpt || a.description || '',
+                                            "datePublished": a.date,
+                                            "author": {
+                                                "@type": "Person",
+                                                "name": a.author || 'Prajyoth Reddy M'
+                                            },
+                                            "url": `https://prajyoth.pages.dev/article.html?id=${a.id || a.slug}`,
+                                            "keywords": a.tags ? a.tags.join(', ') : ''
+                                        }))
+                                    };
+
+                                    let existing = document.getElementById('index-structured-data');
+                                    if (existing) {
+                                        existing.textContent = JSON.stringify(ld);
+                                    } else {
+                                        const s = document.createElement('script');
+                                        s.type = 'application/ld+json';
+                                        s.id = 'index-structured-data';
+                                        s.textContent = JSON.stringify(ld);
+                                        document.head.appendChild(s);
+                                    }
+
+                                } catch (err) {
+                                    console.error('Failed to load latest articles for index:', err);
+                                }
+                            }
+                            if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadLatest); else loadLatest();
+                        })();
+                    </script>
                     <div class="text-center space-y-6">
                         <p class="text-sm text-muted-foreground italic font-mono">More posts coming soon... once I
                             figure out why my latest project is making that beeping sound.</p>

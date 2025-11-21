@@ -164,11 +164,12 @@ const ArticleApp = (() => {
         if (articleTitle) articleTitle.textContent = title;
 
         // Update meta description
-        if (articleDescription) articleDescription.setAttribute('content', article.description);
+        const description = article.excerpt || article.description || '';
+        if (articleDescription) articleDescription.setAttribute('content', description);
 
         // Update Open Graph tags
         if (ogTitle) ogTitle.setAttribute('content', article.title);
-        if (ogDescription) ogDescription.setAttribute('content', article.description);
+        if (ogDescription) ogDescription.setAttribute('content', description);
         if (document.getElementById('og-url')) {
             document.getElementById('og-url').setAttribute('content', fullUrl);
         }
@@ -178,7 +179,7 @@ const ArticleApp = (() => {
             document.getElementById('twitter-title').setAttribute('content', article.title);
         }
         if (document.getElementById('twitter-description')) {
-            document.getElementById('twitter-description').setAttribute('content', article.description);
+            document.getElementById('twitter-description').setAttribute('content', description);
         }
 
         // Update canonical URL
