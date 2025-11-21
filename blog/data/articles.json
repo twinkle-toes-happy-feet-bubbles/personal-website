@@ -1,6 +1,22 @@
 {
   "articles": [
     {
+      "id": "2025-11-22-arrogance-as-a-vulnerability",
+      "title": "\"Case Study: Arrogance as a Vulnerability – The $1M 'Hope'\"",
+      "excerpt": "",
+      "date": "2025-11-22",
+      "author": "Prajyoth Reddy Mothi",
+      "tags": [
+        "security",
+        "firebase",
+        "case-study",
+        "startup-horror",
+        "engineering"
+      ],
+      "readTime": "10 min read",
+      "slug": "arrogance-as-a-vulnerability"
+    },
+    {
       "id": "2025-09-20-watches-are-for-the-poor",
       "title": "Watches are for the poor",
       "excerpt": "Why watches were never just ornaments or tools—they were chains keeping workers' eyes on the clock while owners looked at calendars and forecasts.",
@@ -13,34 +29,6 @@
       ],
       "readTime": 7,
       "slug": "2025-09-20-watches-are-for-the-poor"
-    },
-    {
-      "id": "2025-08-28-why-its-the-hi-human-intelligence-bubble-not-ai-bubble-thats-going-to-burst",
-      "title": "Why it's the HI (Human Intelligence) bubble not AI bubble that's going to burst",
-      "excerpt": "Human Intelligence",
-      "date": "2025-08-28",
-      "author": "Prajyoth Reddy",
-      "tags": [
-        "philosophy",
-        "AI",
-        "Random"
-      ],
-      "readTime": 8,
-      "slug": "why-its-the-hi-human-intelligence-bubble-not-ai-bubble-thats-going-to-burst"
-    },
-    {
-      "id": "2025-01-29-building-with-javascript",
-      "title": "Building Modern Web Apps with Vanilla JavaScript",
-      "excerpt": "Exploring how to build powerful web applications without heavy frameworks, focusing on performance and simplicity.",
-      "date": "2025-01-29",
-      "author": "Prajyoth Reddy",
-      "tags": [
-        "javascript",
-        "web-development",
-        "performance"
-      ],
-      "readTime": 8,
-      "slug": "2025-01-29-building-with-javascript"
     },
     {
       "id": "2025-01-28-welcome-to-my-blog",
@@ -57,7 +45,7 @@
       "slug": "2025-01-28-welcome-to-my-blog"
     }
   ],
-  "totalCount": 4,
-  "lastUpdated": "2025-09-28T08:44:32.591Z",
+  "totalCount": 3,
+  "lastUpdated": "2025-11-21T20:32:30.865Z",
   "generatedBy": "generate-articles.js"
 }

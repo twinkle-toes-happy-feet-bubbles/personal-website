@@ -4,6 +4,9 @@
     "description": "Portfolio and blog for Prajyoth Reddy Mothi",
     "scripts": {
         "build-articles": "node blog/generate-articles.js",
+        "publish": "node blog/publish.js",
+        "watch": "node blog/publish.js --watch",
+        "editor": "node blog/editor/server.js",
         "new-post": "node blog/new-post.js",
         "dev": "python -m http.server 8000",
         "preview": "python -m http.server 3000"
